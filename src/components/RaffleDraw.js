@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import raffleImg from "../img/Pablo_Residence_2.PNG";
+import raffleImg from "../img/Pablo_Residence_2.png";
 
 
 function RaffleDraw() {
