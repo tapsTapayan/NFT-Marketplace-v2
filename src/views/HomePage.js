@@ -409,19 +409,19 @@ function HomePage() {
         </center>
       </section>
       <section className="ms-auto">
-        <div class="dropdown">
+        <div className="dropdown">
           <button
-            class="btn btn-link dropdown-toggle"
+            className="btn btn-link dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="true"
           >
             <GlobeIcon />
           </button>
-          <ul class="dropdown-menu">
+          <ul className="dropdown-menu">
             <li>
               <button
-                class="dropdown-item"
+                className="dropdown-item"
                 onClick={() => handleChangelng("en")}
               >
                 <img
@@ -434,7 +434,7 @@ function HomePage() {
             </li>
             <li>
               <button
-                class="dropdown-item"
+                className="dropdown-item"
                 onClick={() => handleChangelng("tg")}
               >
                 <img
@@ -447,7 +447,7 @@ function HomePage() {
             </li>
             <li>
               <button
-                class="dropdown-item"
+                className="dropdown-item"
                 onClick={() => handleChangelng("por")}
               >
                 <img
@@ -460,7 +460,7 @@ function HomePage() {
             </li>
             <li>
               <button
-                class="dropdown-item"
+                className="dropdown-item"
                 onClick={() => handleChangelng("ind")}
               >
                 <img
