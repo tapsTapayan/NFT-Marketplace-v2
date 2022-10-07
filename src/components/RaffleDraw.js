@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import raffleImg from "../img/Pablo_Residence_2.PNG";
+
 
 function RaffleDraw() {
   return (
@@ -70,7 +72,7 @@ function RaffleDraw() {
         </section> */}
         <div className="banner">
           <div className="slider">
-            <img id="sliderImg" src="./Pablo_Residence_2.PNG" />
+            <img id="sliderImg" src={raffleImg} />
           </div>
           <div className="overlayBack">
             <div className="raffle_content">
