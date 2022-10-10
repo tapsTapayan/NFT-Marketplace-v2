@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import raffleImg from "../img/Pablo_Residence_2.png";
-
+import Modal from "./RaffleModal/Modal";
 
 function RaffleDraw() {
+  const [modalOpen, setOpenModal] = useState(false);
   return (
     <>
       <section className="pt-5 content-eco1-bg text-sm-start">
@@ -93,9 +94,13 @@ function RaffleDraw() {
               <button
                 className="button1_raffle btn btn-lg rounded-pill"
                 type="button"
+                onClick={() => {
+                  setOpenModal(true);
+                }}
               >
                 Learn More
               </button>
+              {modalOpen && <Modal setOpenModal={setOpenModal} />}
             </div>
           </div>
         </div>

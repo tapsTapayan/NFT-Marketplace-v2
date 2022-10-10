@@ -48,6 +48,7 @@ import AlgorithmFilter from "./views/FiltersAlgorithm";
 import ClaimQubesAWS from "./views/ClaimQubesAWS";
 import Practice from "./views/dependetSelect";
 import AllNftFilter from "./views/AllNfts";
+import NotFound from "./components/NotFound/NotFound";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const theme = createTheme({
@@ -274,6 +275,14 @@ const App = () => {
                           <>
                             <TopNav />
                             <MultiCurrencyMarketplace />
+                          </>
+                        }
+                      />
+                      <Route
+                        path={RouteName.notfound}
+                        element={
+                          <>
+                            <NotFound />
                           </>
                         }
                       />
