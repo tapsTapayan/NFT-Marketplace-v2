@@ -14,13 +14,13 @@
   }
   
   /* Modal Content */
-  .modal-content {
+  /* .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+  } */
   
   /* The Close Button */
   .close {
@@ -43,7 +43,11 @@
   }
   
   /* Modal Body */
-  .modal-body {padding: 2px 16px;}
+  .modal-body {
+    padding: 2px 16px;
+    margin: none !important;
+    overflow: auto !important;
+}
   
   /* Modal Footer */
   .modal-footer {
