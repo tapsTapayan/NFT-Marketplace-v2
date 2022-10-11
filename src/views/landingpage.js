@@ -16,11 +16,25 @@ function LandingPage() {
               </p>
             </div>
             <div class="col-4">
-              <ul style={{ listStyleType: "none" }}>
+              <ul style={{ listStyleType: "none", textAlign: "left" }}>
+                <div className="col-md eco-1-title">
+                  <p className="ai-title-home">Community Collection</p>
+                </div>
                 <li> ● STRUCTURAL LEGACIES </li>
                 <li> ● Home Designs </li>
                 <li> ● System Architecture </li>
                 <li> ● Products </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul style={{ listStyleType: "none", textAlign: "left" }}>
+                <div className="col-md eco-1-title">
+                  <p className="ai-title-home">Dao Projects</p>
+                </div>
+                <li> ● Hotel </li>
+                <li> ● Commercial/Residential </li>
+                {/* <li> ● System Architecture </li>
+                <li> ● Products </li> */}
               </ul>
             </div>
           </div>
