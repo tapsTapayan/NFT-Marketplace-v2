@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as emailjs from "emailjs-com";
 import TweetEmbed from "react-tweet-embed";
+import ClaimQubesButton from "../components/ClaimQubesModal/ClaimQubesButton";
+import raffleImg from "../img/Pablo_Residence_2.png";
 
 class ClaimQubesAWS extends Component {
   state = {
@@ -79,7 +81,74 @@ class ClaimQubesAWS extends Component {
 
     return (
       <>
-        <section className="showcase1 text-dark p-2 text-center text-sm-start">
+        <section className="text-center margin-top-10">
+          <div class="card mx-4 mx-md-5 shadow-5-strong claim-qubes-box">
+            <div className="card-body py-5 px-md-5">
+              <div className="row d-flex justify-content-center">
+                <div className="col-lg-8">
+                  <h2 className="fw-bold">CLAIM YOUR QUBES HERE</h2>
+                  <label className="form-label mb-5">
+                    UPON SENDING THE TOKEN ADDRESS, YOU WILL BE ABLE TO CLAIM
+                    YOUR QUBE WITHIN 2 DAYS.
+                  </label>
+
+                  <form id="form-contact">
+                    <div className="form-outline mb-4">
+                      <label className="form-label" for="form3Example3">
+                        <span className="details text-uppercase">
+                          explorer solana com address&nbsp;
+                          <span
+                            style={{
+                              color: "red",
+                            }}
+                          >
+                            *
+                          </span>
+                        </span>
+                      </label>
+                      <input
+                        required
+                        type="text"
+                        name="URL"
+                        value={URL}
+                        onChange={this.changeUrl}
+                        className="form-control"
+                      />
+                      {!this.state.isTrueVal ? (
+                        <div
+                          id="errorMsg"
+                          style={{
+                            color: "red",
+                          }}
+                        >
+                          Enter Valid explorer.solana.com address
+                        </div>
+                      ) : (
+                        <div
+                          id="errorMsg"
+                          style={{
+                            display: "none",
+                          }}
+                        ></div>
+                      )}
+                    </div>
+                    <button
+                      className="contact-send-button btn btn-lg rounded-pill"
+                      id="sendbtn"
+                      type="button"
+                      onClick={handleSubmit}
+                      disabled={!isTrueVal}
+                    >
+                      submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="showcase1 text-dark p-2 text-center text-sm-start">
           <div className="if-container container-fluid">
             <section className="mt-5 text-center">
               <p className="people-title">CLAIM YOUR QUBES HERE</p>
@@ -90,7 +159,7 @@ class ClaimQubesAWS extends Component {
             </section>
           </div>
         </section>
-        <section className="p-5">
+        <section className="p-3">
           <div className="container contacts">
             <form id="form-contact">
               <div
@@ -159,14 +228,36 @@ class ClaimQubesAWS extends Component {
               )}
             </form>
           </div>
-        </section>
+        </section> */}
 
-        <section className="text-center">
-          <p className="people-title">PRIZES AWAITS WHEN YOU BUY OUR NFTs</p>
-          <div className="container">
-              <TweetEmbed tweetId="1562007029539307520" className="hqtweet" />
+        <section className="pt-5 content-eco1-bg text-sm-start">
+          <div className="claim-qubes-banner">
+            <div className="claim-qubes-slider">
+              <img id="sliderImg" src={raffleImg} />
+            </div>
+            <div className="claim-qubes-overlayBack">
+              <div className="text-center text-white">
+                <p className="raffle-title">
+                  PRIZES AWAITS WHEN YOU BUY OUR NFTs
+                </p>
+                <div className="container">
+                  {/* <ClaimQubesButton /> */}
+                  <TweetEmbed
+                    tweetId="1562007029539307520"
+                    className="hqtweet"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
+        {/* <section className="text-center">
+          <div className="container">
+            <ClaimQubesButton />
+            <TweetEmbed tweetId="1562007029539307520" className="hqtweet" />
+          </div>
+        </section> */}
         {/* Twitter */}
       </>
     );
