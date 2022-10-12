@@ -12,8 +12,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const DropDownContainer = styled("li")`
-`;
+const DropDownContainer = styled("li")``;
 
 const DropDownHeader = styled("a")`
   position: relative;
@@ -115,7 +114,7 @@ const NavLinks = (props) => {
           HOMEQUBE.AI
         </a>
       </li>
-  
+
       <li
         className="mx-2 mt-4"
         onClick={() => props.isMobile && props.closeMobileMenu()}
@@ -126,12 +125,13 @@ const NavLinks = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <button
+          {/* <button
             className="exchange-button-more btn rounded-pill"
             type="button"
           >
             TELEGRAM
-          </button>
+          </button> */}
+          <img src="/icons8-telegram.svg" alt="" />
         </a>
       </li>
       <li
@@ -144,15 +144,15 @@ const NavLinks = (props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <button
+          {/* <button
             className="exchange-button-more2 btn rounded-pill"
             type="button"
           >
             DISCORD
-          </button>
+          </button> */}
+          <img src="/icons8-discord.svg" alt="" />
         </a>
       </li>
-
     </>
   );
 };

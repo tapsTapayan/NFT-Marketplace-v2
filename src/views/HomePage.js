@@ -183,11 +183,10 @@ function HomePage() {
               </h1>
 
               <p className="intro-sentence mt-5">
-                We are solana based NFT “Launchpad-Marketplace” for home <br />{" "}
-                manufacturing, from 3d printed parts, home designs, home <br />
-                system algorithms, decors, fixtures furniture's, prototypes, and{" "}
-                <br /> related others to homebuilding both for the metaverse and
-                IRL.
+                We are solana based net "Launchpad-marketplace" we create <br />
+                manufacturing and design solutions for all the homebuilding{" "}
+                <br />
+                needs and their products for metaverse and in real life.
               </p>
 
               <div className="intro-btn2">
