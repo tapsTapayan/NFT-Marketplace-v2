@@ -2418,3 +2418,79 @@ h4 {
   text-transform: uppercase;
   color: #d7d7d8 !important;
 }
+.new-footer-headline {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  /* or 24px */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.new-footer-headline-2 {
+  /* Headline/18px/Bold */
+
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+  /* or 24px */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.new-footer-text {
+  /* Headline/18px/Bold */
+
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+  /* or 24px */
+
+  text-transform: uppercase;
+
+  /* Primary/5 */
+
+  color: #ffffff;
+}
+.new-footer-icons {
+  width: 32px;
+  height: 32px;
+}
+.bg-black{
+  background-color: #000;
+}
+
+
+@media (min-width: 310px) {
+  .footerResponsive{
+    display: grid;
+  }
+  .footerWeb{
+    display: none;
+  }
+}
+
+@media (min-width: 990px) {
+  .footerResponsive{
+    display: none;
+  }
+  .footerWeb{
+    display: grid;
+  }
+}
+.a-no-design{
+  color: #ffffff;
+  text-decoration: none;
+}
+.a-no-design:hover{
+  color: #dddddd;
+}

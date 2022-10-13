@@ -49,6 +49,7 @@ import ClaimQubesAWS from "./views/ClaimQubesAWS";
 import Practice from "./views/dependetSelect";
 import AllNftFilter from "./views/AllNfts";
 import NotFound from "./components/NotFound/NotFound";
+import Footer2 from "./components/Footer2";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const theme = createTheme({
@@ -299,7 +300,8 @@ const App = () => {
                   </MainContainer>
                 </main>
               </CandyShopDataValidator>
-              <Footer />
+              {/* <Footer /> */}
+              <Footer2/>
             </WalletModalProvider>
           </CurrencyProvider>
         </WalletProvider>
