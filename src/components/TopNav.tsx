@@ -18,11 +18,8 @@ interface TopNavProps {
 }
 
 const ROUTES = [
-  { url: RouteName.HomePage, name: "Home" },
-  { url: RouteName.marketplace, name: "Marketplace" },
-  // { url: RouteName.home, name: "Marketplace" },
-  { url: RouteName.sell, name: "Sell" },
-  { url: RouteName.auctionsView, name: "Auctions" },
+  { url: RouteName.multipleCurrencyMarketplace, name: "Dao Projects" },
+  { url: RouteName.ClaimQubes, name: "Claim Qubes" },
 ];
 
 // const OTHER_LAYOUT_ROUTES = [
@@ -35,23 +32,25 @@ const ROUTES = [
 //   },
 //   { url: RouteName.multipleCurrencySell, name: "Multi Currency Sell" },
 // ];
-const OTHER_LAYOUT_ROUTES = [
-  { url: RouteName.customToken, name: "Custom Token Marketplace" },
-  { url: RouteName.multipleCollection, name: "Multi Collection Marketplace" },
-  { url: RouteName.marketplaceWithUrl, name: "Marketplace With URL" },
-  {
-    url: RouteName.multipleCurrencyMarketplace,
-    name: "Multi Currency Marketplace",
-  },
-  { url: RouteName.multipleCurrencySell, name: "Multi Currency Sell" },
-  { url: RouteName.activityView, name: "Marketplace Activity" },
+const DROP_DOWN_MENU = [
+  { url: RouteName.HomeDesignFilter, name: "Community Collection" },
+  { url: RouteName.MyCollection, name: "My Collection" },
+  // { url: RouteName.marketplaceWithUrl, name: "Marketplace With URL" },
+  // {
+  //   url: RouteName.multipleCurrencyMarketplace,
+  //   name: "Multi Currency Marketplace",
+  // },
+  // { url: RouteName.multipleCurrencySell, name: "Multi Currency Sell" },
+  // { url: RouteName.activityView, name: "Marketplace Activity" },
 ];
 
 const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
   const wallet = useAnchorWallet();
 
   const [open, setOpen] = useState(false);
+  const [open_sub, setOpen_sub] = useState(false);
   const anchorRef = useRef<HTMLLIElement>(null);
+  const anchorRef_sub = useRef<HTMLLIElement>(null);
 
   const { pathname } = useLocation();
 
@@ -59,15 +58,30 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
+  const handleToggle_sub = () => {
+    setOpen_sub((prevOpen) => !prevOpen);
+  };
+
   const handleClose = (event: any) => {
     if (anchorRef.current?.contains(event.target)) return;
     setOpen(false);
+  };
+
+  const handleClose_sub = (event: any) => {
+    if (anchorRef_sub.current?.contains(event.target)) return;
+    setOpen_sub(false);
   };
 
   const handleListKeyDown = (event: any) => {
     if (event.key === "Tab") {
       event.preventDefault();
       setOpen(false);
+    }
+  };
+  const handleListKeyDown_sub = (event: any) => {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      setOpen_sub(false);
     }
   };
 
@@ -81,20 +95,134 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
   }, [open]);
 
   return (
-    <HeaderBar className="navbar navbar-expand-lg navbar-light HeaderBar">
+    <HeaderBar className="navbar navbar-expand-lg HeaderBar">
       <Logo>
         <Link to={RouteName.HomePage}>
-          <img alt="" src="/Homeqube-logo-black_small 1.svg" />
+          <img alt="" src="/Rework-Logo.svg" />
         </Link>
       </Logo>
-      <MobileNavigation />
-      <Navigation />
+      <Menu>
+        <DropdownAnchor
+          ref={anchorRef}
+          onClick={handleToggle}
+          className={
+            DROP_DOWN_MENU.some((item) => item.url === pathname) ? "active" : ""
+          }
+        >
+          Collection <i className="icon-down fas fa-chevron-down" />
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
+                  {DROP_DOWN_MENU.map((item) => (
+                    <MenuItem
+                      className={
+                        item.url === pathname ? "active active-submenu" : ""
+                      }
+                      key={item.url}
+                    >
+                      <Link to={item.url}>{item.name}</Link>
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Popper>
+        </DropdownAnchor>
+        {ROUTES.map((item) => (
+          <li key={item.url} className={pathname === item.url ? "active" : ""}>
+            <Link to={item.url}>{item.name}</Link>
+          </li>
+        ))}
+        <li className="mx-3">
+          <a
+            href="https://www.homeqube.ai/"
+            key={"homeqube"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            HOMEQUBE.AI
+          </a>
+        </li>
+        <DropdownAnchor_Sub ref={anchorRef_sub} onClick={handleToggle_sub}>
+          Our projects <i className="icon-down fas fa-chevron-down" />
+          <Popper
+            open={open_sub}
+            anchorEl={anchorRef_sub.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose_sub}>
+                <MenuList
+                  autoFocusItem={open_sub}
+                  onKeyDown={handleListKeyDown_sub}
+                >
+                  <MenuItem>
+                    <a
+                      href="https://www.qube.homeqube.com/"
+                      key={"homeqube"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="qube-text"
+                    >
+                      QUBE.HOMEQUBE{" "}
+                      <i className="fas fa-solid fa-arrow-right mx-2" />
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="https://www.homeqube.com/"
+                      key={"homeqube"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="qube-text"
+                    >
+                      HOMEQUBE.COM{" "}
+                      <i className="fas fa-solid fa-arrow-right mx-3" />
+                    </a>
+                  </MenuItem>
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Popper>
+        </DropdownAnchor_Sub>
+        <li>
+          <a
+            href="https://t.me/homeqube"
+            key={"telegram"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/telegram2.svg" alt="" />
+          </a>
+          <a
+            href="https://discord.gg/JhQXmjm59e"
+            key={"telegram"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/discord2.svg" alt="" className="mx-3" />
+          </a>
+        </li>
+      </Menu>
+      {/* <MobileNavigation />
+      <Navigation /> */}
       {showCurrencyToggle && <CurrencyToggle />}
       <Wallet>
         {wallet ? (
           <ConnectButton className="wallet-width" />
         ) : (
-          <ConnectButton className="wallet-width">Connect Wallet</ConnectButton>
+          <ConnectButton className="wallet-width-connect">
+            Connect Wallet
+          </ConnectButton>
         )}
       </Wallet>
     </HeaderBar>
@@ -107,13 +235,19 @@ const HeaderBar = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
+  background-color: #0a0909;
+  backdrop-filter: blur(5px);
   padding-right: 4%;
   padding-left: 4%;
 `;
 
 const DropdownAnchor = styled.li`
   cursor: pointer;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
 
   &:hover {
     color: rgb(131, 146, 161);
@@ -124,11 +258,58 @@ const DropdownAnchor = styled.li`
   }
 
   .MuiList-root {
-    margin-top: 15px;
+    margin-top: 30px;
+    background: #3f3f4b;
+    width: 238px;
+    height: 116px;
+    z-index: 4;
 
     a {
       padding-top: 4px;
       padding-bottom: 4px;
+      color: #fff;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+
+      &:hover {
+        border-bottom: 0px;
+        color: #fff;
+      }
+    }
+  }
+`;
+const DropdownAnchor_Sub = styled.li`
+  cursor: pointer;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: rgb(131, 146, 161);
+  }
+
+  > div {
+    z-index: 1000;
+  }
+
+  .MuiList-root {
+    margin-top: 30px;
+    background: #3f3f4b;
+    width: 198px;
+    height: 116px;
+
+    a {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: #fff;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
 
       &:hover {
         border-bottom: 0px;
@@ -139,18 +320,32 @@ const DropdownAnchor = styled.li`
 `;
 
 const Wallet = styled.ul`
-  flex: 0 0 auto;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .wallet-adapter-button {
+    margin: 0 auto;
+    line-height: 1rem;
+  }
 `;
 
 const ConnectButton = styled(WalletMultiButton)`
   padding: 6px 16px;
   border-radius: 50rem !important;
-  background-color: #4e44ce;
+  background-color: #f4f4f8;
   margin: 0 auto;
   margin-top: 1.5rem !important;
   font-family: "Rajdhani", sans-serif !important;
+  width: 169px;
+  height: 56px;
+  color: #040f24;
+  font-style: normal;
+  font-weight: 700;
+
+  text-align: center;
+  text-transform: uppercase;
 `;
 
 const Logo = styled.div`
@@ -158,22 +353,32 @@ const Logo = styled.div`
   margin-right: 10px;
 
   img {
-    height: 7rem;
+    height: 3rem;
   }
 `;
 
 const Menu = styled.ul`
   list-style: none;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
   flex: 1 0 auto;
   margin-bottom: 0;
+  padding-left: 7%;
+  gap: 6%;
 
   li {
     margin: 0 12px;
-    padding: 5px;
+
+    color: #fff;
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
 
     a {
-      color: var(--main-text-color);
+      color: #fff;
       list-style-image: none;
       list-style-position: outside;
       list-style-type: none;
@@ -182,9 +387,10 @@ const Menu = styled.ul`
       text-size-adjust: 100%;
       touch-action: manipulation;
       transition: color 0.3s;
+      text-transform: uppercase;
 
       img {
-        max-height: 26px;
+        max-height: 50px;
       }
     }
 

@@ -1,27 +1,24 @@
 import NavLinks from "./NavLinks";
-import React from 'react'
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
-import { Link } from 'react-router-dom'
-import { useAnchorWallet } from '@solana/wallet-adapter-react'
-import MenuItem from '@material-ui/core/MenuItem'
-import MenuList from '@material-ui/core/MenuList'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
-import CurrencyToggle from '../CurrencyToggle'
-import Paper from '@material-ui/core/Paper'
-import Popper from '@material-ui/core/Popper'
-import styled from 'styled-components'
+import React from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { Link } from "react-router-dom";
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import CurrencyToggle from "../CurrencyToggle";
+import Paper from "@material-ui/core/Paper";
+import Popper from "@material-ui/core/Popper";
+import styled from "styled-components";
 
-
-const Navigation = () =>{
-    return(
-        <nav className="Menu">
-            <NavLinks />
-        </nav>
-    
-    );
-}
+const Navigation = () => {
+  return (
+    <nav className="Menu">
+      <NavLinks />
+    </nav>
+  );
+};
 export default Navigation;
-
 
 const HeaderBar = styled.div`
   display: flex;
@@ -30,13 +27,13 @@ const HeaderBar = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-`
+`;
 
 const DropdownAnchor = styled.li`
   cursor: pointer;
 
   &:hover {
-    color: rgb(131,146,161);
+    color: rgb(131, 146, 161);
   }
 
   > div {
@@ -56,7 +53,7 @@ const DropdownAnchor = styled.li`
       }
     }
   }
-`
+`;
 
 // const WalletAmount = styled.div`
 //   color: black;
@@ -90,7 +87,7 @@ const Wallet = styled.ul`
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
-`
+`;
 
 const ConnectButton = styled(WalletMultiButton)`
   border-radius: 18px !important;
@@ -98,16 +95,16 @@ const ConnectButton = styled(WalletMultiButton)`
   background-color: #4e44ce;
   margin: 0 auto;
   margin-top: 1.5rem !important;
-`
+`;
 
 const Logo = styled.div`
   flex: 0 0 auto;
   margin-right: 10px;
 
   img {
-    height: 7rem;
+    height: 2rem;
   }
-`
+`;
 
 // const Menu = styled.ul`
 //   list-style: none;

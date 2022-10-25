@@ -672,7 +672,7 @@ a:active {
   cursor: pointer;
 }
 .Menu a {
-  color: var(--main-text-color);
+  color: #fff;
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
@@ -1374,64 +1374,68 @@ h4 {
   background-repeat: no-repeat;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 8% !important;
 }
 .intro {
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 62px;
+  line-height: 67.2px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
 }
 .intro-sentence {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   letter-spacing: 0.05em;
-  text-align: left;
+  text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 .intro-btn2 {
   display: flex;
-  column-gap: 10px;
+  justify-content: center;
+  column-gap: 32px;
   justify-content: first baseline;
+  padding-top: 5%;
 }
 .button2 {
-  background: #2f2f2f;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
-  width: 130px;
-  height: 50px;
+  border: 1px solid #ffffff;
+  /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 100px;
+  width: 175px;
+  height: 56px;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.3px;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #d7d7d8;
+  color: #ffffff;
 }
 .button2:hover {
   color: #ffffff;
 }
 .button1 {
-  background: linear-gradient(44.73deg, #7c7c7c 11.32%, #4e4e4e 92.96%);
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
-  width: 130px;
-  height: 50px;
+  background: #f4f4f8;
+  border-radius: 100px;
+  width: 229px;
+  height: 56px;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.3px;
   text-align: center;
-  letter-spacing: 0.05em;
+  padding-inline-start: 2rem;
   text-transform: uppercase;
-  color: #d7d7d8;
+  color: #040f24;
 }
 .button1:hover {
-  color: #ffffff;
+  color: #040f24;
 }
 .a-link {
   color: rgb(215, 215, 216) !important;
@@ -1441,13 +1445,18 @@ h4 {
   color: rgb(215, 215, 216);
 }
 .showcase {
-  background-color: #2f2f2f;
+  /* background-color: #2f2f2f; */
+  background-image: url("../src/img/ReworkBG.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 80vh;
 }
 .showcase-1 {
   background-color: #ffffff !important;
 }
 .container-content {
   display: flex;
+  justify-content: center;
 }
 .contaner-contact {
   width: 100%;
@@ -2396,15 +2405,15 @@ h4 {
   position: absolute;
 }
 
-.claim-qubes-box{
+.claim-qubes-box {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: blur(30px);
 }
-.margin-top-10{
+.margin-top-10 {
   margin-top: 7rem;
 }
-.claimqubes-button-more2{
+.claimqubes-button-more2 {
   background: linear-gradient(44.73deg, #7c7c7c 11.32%, #4e4e4e 92.96%);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
@@ -2465,32 +2474,44 @@ h4 {
   width: 32px;
   height: 32px;
 }
-.bg-black{
+.bg-black {
   background-color: #000;
 }
 
-
 @media (min-width: 310px) {
-  .footerResponsive{
+  .footerResponsive {
     display: grid;
   }
-  .footerWeb{
+  .footerWeb {
     display: none;
   }
 }
 
 @media (min-width: 990px) {
-  .footerResponsive{
+  .footerResponsive {
     display: none;
   }
-  .footerWeb{
+  .footerWeb {
     display: grid;
   }
 }
-.a-no-design{
+.a-no-design {
   color: #ffffff;
   text-decoration: none;
 }
-.a-no-design:hover{
+.a-no-design:hover {
   color: #dddddd;
+}
+
+.icon-down {
+  position: relative;
+  top: 4%;
+  left: 4%;
+}
+
+.qube-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

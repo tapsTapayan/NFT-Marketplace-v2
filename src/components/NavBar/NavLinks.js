@@ -11,6 +11,7 @@ import Popper from "@material-ui/core/Popper";
 import styled from "styled-components";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 const DropDownContainer = styled("li")``;
 
@@ -61,18 +62,36 @@ const ListItem = styled("li")`
 const NavLinks = (props) => {
   const [active, setActive] = useState("navItem1");
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const toggling = () => setIsOpen(!isOpen);
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
   return (
     <>
       <li
-        className="mx-3 mt-4"
+        className="mx-3 mt-4 list-light-text"
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         onClick={() =>
           setActive("navItem1") && props.isMobile && props.closeMobileMenu()
         }
       >
         <NavLink to="/home-designs">
-          COMMUNITY <br /> COLLECTION
+          COLLECTIONS <i className="icon-down fas fa-chevron-down" />
         </NavLink>
+        {dropdown && <Dropdown />}
       </li>
 
       <li
@@ -212,7 +231,7 @@ const Logo = styled.div`
   margin-right: 10px;
 
   img {
-    height: 7rem;
+    height: 2rem;
   }
 `;
 

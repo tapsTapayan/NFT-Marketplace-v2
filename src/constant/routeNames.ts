@@ -20,5 +20,6 @@ export enum RouteName {
   multipleCurrencySell = "/multi-currency-sell",
   addMyCollections = "/addmycollection",
   practice = "/practice",
+  community = "/community",
   notfound = "*",
 }
