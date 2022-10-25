@@ -170,9 +170,9 @@ function HomePage() {
   ];
   return (
     <>
-      <section className="showcase text-light p-5 text-center text-sm-start">
+      <section className="showcase text-light p-5 text-center">
         <div className="container-bg container">
-          <div className="d-sm align-content-center justify-content-between container-content">
+          <div className="d-sm align-content-center container-content">
             <div>
               <h1 className="intro">
                 Deconstructing Systems.
@@ -182,11 +182,14 @@ function HomePage() {
                 Democratizing Knowledge.
               </h1>
 
-              <p className="intro-sentence mt-5">
-                We are solana based net "Launchpad-marketplace" we create <br />
-                manufacturing and design solutions for all the homebuilding{" "}
+              <p className="intro-sentence mt-4">
+                We are solana based NFT “launchpad-marketplace” for home
+                manufacturing, from 3D <br />
+                printed parts, home designs, home system algorithms, decors,
+                fixtures furnitures,
                 <br />
-                needs and their products for metaverse and in real life.
+                prototypes, and related others to homebuilding both for the
+                metaverse and IRL.
               </p>
 
               <div className="intro-btn2">
@@ -195,7 +198,7 @@ function HomePage() {
                     onclick="window.open('https://mint.homeqube.io/')"
                     className="button2 btn btn-lg rounded-pill"
                   >
-                    Mint
+                    Mint your nft
                   </button>
                 </a>
                 <NavLink to="/home-designs" className="a-link">
@@ -203,12 +206,17 @@ function HomePage() {
                     className="button1 btn btn-lg rounded-pill"
                     type="button"
                   >
-                    Collections
+                    View Collections
+                    <img
+                      src="/icons8-right-24.png"
+                      className="p-1"
+                      alt="image"
+                    />
                   </button>
                 </NavLink>
               </div>
             </div>
-            <div className="yt-vid">
+            {/* <div className="yt-vid">
               <video width="100%" height="100%" autoPlay loop muted>
                 <source
                   src="https://s3.amazonaws.com/www.qube.homeqube.com/homeqube+IO+Video/Homeqube-ICO.mp4"
@@ -218,15 +226,15 @@ function HomePage() {
                   src="https://s3.amazonaws.com/www.qube.homeqube.com/homeqube+IO+Video/Homeqube-ICO.ogg"
                   type="video/ogg"
                 />
-              </video>
-              {/* <Player 
+              </video> */}
+            {/* <Player 
              src={videoSrc}
              width="560"
              height="290"
              muted = {true}
              autoPlay = {true}
              />   */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </section>
