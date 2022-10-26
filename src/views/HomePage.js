@@ -388,8 +388,8 @@ function HomePage() {
         </div>
       </section> */}
 
-      <section className="pt-5 text-center text-center content-eco1-bg text-sm-start">
-        <img
+      <section className="content-eco1-bg"></section>
+      {/* <img
           src="/Left-Box-1.svg"
           className="box-animation-1 img-fluid d-sm-none d-md-block"
         />
@@ -403,18 +403,16 @@ function HomePage() {
         />
         <br />
         <br />
-        <br />
-        <div className="col-md eco-1-title">
-          <p className="ai-title-home">Getting started</p>
-        </div>
-        <div></div>
-        <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p>
-        <center>
+        <br /> */}
+
+      <div></div>
+      <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p>
+      {/* <center>
           <div className="faq-rectangle"></div>
           <br />
           <br />
-        </center>
-      </section>
+        </center> */}
+
       <section className="ms-auto">
         <div className="dropdown">
           <button
@@ -483,9 +481,10 @@ function HomePage() {
       </section>
 
       <section
-        className="p-4 text-dark text-start bg-white"
-        style={{ fontSize: "2rem" }}
+        className="ms-5 text-dark text-start bg-white"
+        style={{ fontSize: "2rem", paddingBottom: "5rem" }}
       >
+        <p className="getting-start-title">Getting started</p>
         <div className="accordion">
           {accordionData.map(
             ({
@@ -561,33 +560,22 @@ function HomePage() {
         </div>
       </section>
 
-      <section>
+      <section className="bg-raffle">
         <RaffleDraw />
         {/* <raffleBanner /> */}
       </section>
+      <div className="bg-collection"></div>
 
-      <section className="text-center content-eco1-bg pt-5">
-        <img
-          src="/Right-Box-1(Faded).svg"
-          className="img-fluid right-box-2nd-animation-1"
-        />
-        <img
-          src="/Right-Box-2(Upper).svg"
-          className="img-fluid right-box-2nd-animation-2"
-        />
-        <img
-          src="/Right-Box-3(Bottom).svg"
-          className="img-fluid right-box-2nd-animation-3"
-        />
-        <section className="pt-5 text-center text-center content-eco1-bg text-sm-start">
-          <div className="col-md eco-1-title">
+      <section className="text-center bg-nft-collection eco-pt-5">
+        <section className="pt-5 text-center text-center  text-sm-start">
+          {/* <div className="col-md eco-1-title">
             <p className="ai-title-home">NFT COLLECTIONS</p>
-          </div>
+          </div> */}
           <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p>
 
-          <center>
+          {/* <center>
             <div className="faq-rectangle"></div>
-          </center>
+          </center> */}
           <br />
           <br />
           <LandingPage />

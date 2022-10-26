@@ -1297,6 +1297,9 @@ h4 {
 .accordion-item {
   border: none;
 }
+.accordion {
+  font-size: 1.5rem;
+}
 .item-description {
   justify-content: center;
   margin-right: 11%;
@@ -1537,6 +1540,7 @@ h4 {
 }
 .content-eco1-bg {
   background-color: #fff;
+  padding: 24px 159px;
 }
 .eco-1-title {
   font-style: normal;
@@ -1546,6 +1550,9 @@ h4 {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .img-poweredcon {
   margin: auto !important;
@@ -2266,8 +2273,15 @@ h4 {
 .ai-title-home {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
+
+.getting-start-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .text-grey {
   color: #a7a7a7 !important;
 }
@@ -2314,6 +2328,7 @@ h4 {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  /* background-image: url("/src/bg-black.png"); */
 }
 
 #sliderImg {
@@ -2514,4 +2529,108 @@ h4 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.bg-raffle {
+  background-color: #0a0909;
+  height: 100vh;
+  width: 100%;
+}
+
+.sub-raff {
+  padding-left: 23rem;
+  margin-top: 10rem;
+}
+.sub-text-raf {
+  margin-top: 10rem;
+}
+
+.raffle-sec {
+  display: flex;
+}
+
+.raffle-sub-title {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.raffle-sub-title-2 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.raffle-sub-title-3 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-size: 1.125rem;
+}
+
+.raffle-sub-title-4 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.sub-text-raff-1 {
+  padding: 0;
+}
+
+.bg-nft-collection {
+  background-color: #1c2433;
+  height: 70vh;
+}
+
+.nft-collection-sec {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.nft-subtext-1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.nft-subtext-2 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.collection-sec {
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  flex-direction: row;
+  gap: 3.7rem;
+}
+.collection-sub-text-1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.collection-sec-2 {
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  flex-direction: row;
+  gap: 3.7rem;
+}
+
+.list-collection {
+  list-style: square;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
 }
