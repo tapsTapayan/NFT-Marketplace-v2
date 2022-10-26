@@ -151,7 +151,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
           </a>
         </li>
         <DropdownAnchor_Sub ref={anchorRef_sub} onClick={handleToggle_sub}>
-          Our projects <i className="icon-down fas fa-chevron-down" />
+          Other Products <i className="icon-down fas fa-chevron-down" />
           <Popper
             open={open_sub}
             anchorEl={anchorRef_sub.current}
