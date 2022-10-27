@@ -17,19 +17,22 @@ const ProductsFilter: React.FC = () => {
 
   return (
     <>
-      <nav className="candy-orders-filter menu text-uppercase pb-3 pt-3">
+      <section className="pt-5 bg-collection-2 text-start text-light text-uppercase">
+        <h1 className="community-collection-title">Community Collection</h1>
+      </section>
+      <nav className="candy-orders-filter menu text-uppercase pb-3 pt-5">
         <li>
           <NavLink to="/home-designs">
             Home Generative Designs and Algorithms
           </NavLink>
         </li>
         <li>
-          <NavLink to="/home-products">
-            Home Products
-          </NavLink>
+          <NavLink to="/home-products">Home Products</NavLink>
         </li>
         <li>
-          <NavLink to="/just-for-fun" className="active">JFF Just-for-Fun</NavLink>
+          <NavLink to="/just-for-fun" className="active">
+            JFF Just-for-Fun
+          </NavLink>
         </li>
       </nav>
       <DesContainer>
@@ -63,8 +66,7 @@ const FILTERS = [
     collectionId: "1",
     identifier: [-1434943395, 691144404],
     qubeClaims: "",
-    description:
-      "",
+    description: "",
   },
 ];
 
