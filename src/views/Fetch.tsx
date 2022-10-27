@@ -44,7 +44,9 @@ const Fetch: React.FC = () => {
 
   return (
     <DesContainer>
-      <h1 style={{ marginBottom: 30 }}>My Collection</h1>
+      <section className="pt-5 bg-collection-2 text-start text-light text-uppercase">
+        <h1 className="community-collection-title">My Collection</h1>
+      </section>
       <UserCollection
         wallet={wallet}
         candyShop={candyShop}

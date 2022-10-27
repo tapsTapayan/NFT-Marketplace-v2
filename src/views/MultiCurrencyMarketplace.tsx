@@ -41,13 +41,16 @@ const MultiCurrencyMarketplace: React.FC = () => {
 
   return (
     <>
-       <nav className="candy-orders-filter menu text-uppercase pb-3 pt-3">
+      <section className="pt-5 bg-collection-2 text-start text-light text-uppercase">
+        <h1 className="community-collection-title">Real Estate</h1>
+      </section>
+      {/* <nav className="candy-orders-filter menu text-uppercase pb-3 pt-3">
         <li>
           <NavLink to="/usdcnft" className="active">
            REAL ESTATE
           </NavLink>
         </li>
-      </nav>
+      </nav> */}
       <DesContainer>
         <Stat
           candyShop={candyShop}

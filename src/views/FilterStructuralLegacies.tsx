@@ -18,8 +18,11 @@ const StructuralLegaciesFilter: React.FC = () => {
 
   return (
     <>
-      <nav className="candy-orders-filter menu text-uppercase pb-3 pt-3">
-      <li>
+      <section className="pt-5 bg-collection-2 text-start text-light text-uppercase">
+        <h1 className="community-collection-title">Community Collection</h1>
+      </section>
+      <nav className="candy-orders-filter menu text-uppercase pb-3 pt-5">
+        <li>
           <NavLink to="/home-designs">
             Home Generative Designs and Algorithms
           </NavLink>
@@ -30,7 +33,7 @@ const StructuralLegaciesFilter: React.FC = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/just-for-fun" >JFF Just-for-Fun</NavLink>
+          <NavLink to="/just-for-fun">JFF Just-for-Fun</NavLink>
         </li>
       </nav>
       <DesContainer>
@@ -88,8 +91,7 @@ const FILTERS = [
     collectionId: "4",
     identifier: -16541584,
     qubeClaims: "",
-    description:
-      "",
+    description: "",
   },
 ];
 
