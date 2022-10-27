@@ -41,7 +41,7 @@ function LandingPage() {
             </ul>
           </h1>
         </section>
-        <div className="pt-5">
+        <div className="pt-3">
           <NavLink to="/home-designs" className="a-link">
             <button className="button1 btn btn-lg rounded-pill" type="button">
               View Collections
