@@ -167,13 +167,13 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
                 >
                   <MenuItem>
                     <a
-                      href="https://www.qube.homeqube.com/"
+                      href="https://www.homeqube.io/"
                       key={"homeqube"}
                       target="_blank"
                       rel="noreferrer"
                       className="qube-text"
                     >
-                      QUBE.HOMEQUBE{" "}
+                      HOMEQUBE.IO{" "}
                       <i className="fas fa-solid fa-arrow-right mx-2" />
                     </a>
                   </MenuItem>
