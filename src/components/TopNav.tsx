@@ -140,7 +140,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
             <Link to={item.url}>{item.name}</Link>
           </li>
         ))}
-        <li className="mx-3">
+        {/* <li className="mx-3">
           <a
             href="https://www.homeqube.ai/"
             key={"homeqube"}
@@ -149,7 +149,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
           >
             HOMEQUBE.AI
           </a>
-        </li>
+        </li> */}
         <DropdownAnchor_Sub ref={anchorRef_sub} onClick={handleToggle_sub}>
           Other Products <i className="icon-down fas fa-chevron-down" />
           <Popper
@@ -186,6 +186,18 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
                       className="qube-text"
                     >
                       HOMEQUBE.COM{" "}
+                      <i className="fas fa-solid fa-arrow-right mx-3" />
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="https://www.homeqube.ai/"
+                      key={"homeqube"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="qube-text"
+                    >
+                      HOMEQUBE.AI{" "}
                       <i className="fas fa-solid fa-arrow-right mx-3" />
                     </a>
                   </MenuItem>
@@ -260,8 +272,8 @@ const DropdownAnchor = styled.li`
   .MuiList-root {
     margin-top: 30px;
     background: #3f3f4b;
-    width: 238px;
-    height: 116px;
+    width: auto;
+    height: auto;
     z-index: 4;
 
     a {
@@ -299,8 +311,8 @@ const DropdownAnchor_Sub = styled.li`
   .MuiList-root {
     margin-top: 30px;
     background: #3f3f4b;
-    width: 198px;
-    height: 116px;
+    width: auto;
+    height: auto;
 
     a {
       padding-top: 4px;
@@ -365,7 +377,7 @@ const Menu = styled.ul`
   padding: 0px;
   flex: 1 0 auto;
   margin-bottom: 0;
-  padding-left: 7%;
+  padding-left: 10%;
   gap: 6%;
 
   li {
