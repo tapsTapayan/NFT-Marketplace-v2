@@ -1,4 +1,5 @@
-/* Customize your main colors in :root variables */
+/* Customize your main colors in :root variables  */
+
 :root {
   --main-background-color: #fff;
   --card-background-color: #51576d;
@@ -1078,11 +1079,26 @@ h4 {
 }
 
 .SL-Des {
-  text-align: justify;
+  /* text-align: justify !important; */
+  white-space: pre-wrap !important;
   /* display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden; */
+}
+.HP-Des {
+  font-style: italic;
+}
+
+.HP-Des-4 {
+  display: flex;
+  flex-direction: column;
+  text-align: start !important;
+}
+
+.nft-list-com-col {
+  display: flex;
+  justify-content: center;
 }
 
 .display {
@@ -1316,29 +1332,26 @@ h4 {
   font-size: 1.5rem;
 }
 .item-description {
-  justify-content: center;
-  margin-right: 11%;
-  margin-left: 11%;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  margin-top: 1rem;
+  white-space: pre-wrap !important;
 }
 @media (min-width: 250px) {
   .item-description {
-    justify-content: center;
+    /* justify-content: center;
     margin-right: 4%;
     margin-left: 4%;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 0; */
   }
 }
 
 @media (min-width: 768px) {
   .item-description {
-    justify-content: center;
+    /* justify-content: center;
     margin-right: 11%;
     margin-left: 11%;
     padding-right: 3rem;
-    padding-left: 3rem;
+    padding-left: 3rem; */
   }
 }
 .showcase-intro {
@@ -1390,9 +1403,10 @@ h4 {
 .container-bg {
   /* background-image: url("../src/BG\ 1.svg"); */
   background-repeat: no-repeat;
-  padding-left: 1em;
+  /* padding-left: 1em;
   padding-right: 1em;
-  padding-top: 8% !important;
+  padding-top: 8% !important; */
+  margin-top: 5%;
 }
 .intro {
   font-style: normal;
@@ -2562,6 +2576,18 @@ h4 {
 
 .raffle-sec {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10%;
+  margin-top: 8%;
+}
+
+.raffle-sec-claim {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10%;
+  margin-top: 4%;
 }
 
 .raffle-sub-title {
@@ -2597,7 +2623,11 @@ h4 {
 
 .bg-nft-collection {
   background-color: #1c2433;
-  height: 70vh;
+  height: 100vh;
+}
+
+.nft-raffle-sec-2 {
+  margin-top: 5%;
 }
 
 .nft-collection-sec {
@@ -2653,6 +2683,10 @@ h4 {
 .bg-collection-2 {
   background-color: #161920;
   height: 15vh;
+}
+.bg-raffle-2 {
+  background-color: #161920;
+  height: 100vh;
 }
 
 .community-collection-title {
@@ -2720,7 +2754,7 @@ h4 {
 
 .bg-raffle-sec {
   background-color: #1c2433;
-  height: 80vh;
+  height: 100vh;
 }
 
 .raff-sub-text {
@@ -2729,4 +2763,11 @@ h4 {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+}
+
+.raffle-sec-dao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20%;
 }

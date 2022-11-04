@@ -30,7 +30,7 @@ const HomeDesignFilter: React.FC = () => {
           <NavLink to="/home-products">Home Products</NavLink>
         </li>
         <li>
-          <NavLink to="/just-for-fun">JFF Just-for-Fun</NavLink>
+          <NavLink to="/just-for-fun">JUST-FOR-FUN (JFF)</NavLink>
         </li>
       </nav>
       <DesContainer>
@@ -65,7 +65,10 @@ const FILTERS = [
     identifier: 1462698944,
     qubeClaims: "",
     description:
-      "THESE ARE OUR COMMUNITY COLLECTIONS OF HOME DESIGNS, THAT WILL GENERATE BOTTOM-UP ARCHITECTURE.",
+      "Community collection of home designs generating bottom-up architecture",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
   {
     name: "Community Projects",
@@ -73,7 +76,10 @@ const FILTERS = [
     identifier: -16541584,
     qubeClaims: "",
     description:
-      "THESE ARE OUR COMMUNITY COLLECTIONS OF HOME DESIGNS, THAT WILL GENERATE BOTTOM-UP ARCHITECTURE.",
+      "Community collection of home designs generating bottom-up architecture",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

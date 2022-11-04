@@ -22,17 +22,26 @@ function FooterResponsive() {
                 Learn More
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/stakeholders" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/stakeholders"
+                  className="a-no-design"
+                >
                   StakeHolders
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/qube-tokenomics" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/qube-tokenomics"
+                  className="a-no-design"
+                >
                   Tokenomics
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/carbon-credit" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/carbon-credit"
+                  className="a-no-design"
+                >
                   Carbon Credit
                 </a>
               </div>
@@ -43,22 +52,34 @@ function FooterResponsive() {
             <div className="d-flex align-items-center flex-column">
               <div class="new-footer-headline text-uppercase mb-2">Company</div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/about" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/about"
+                  className="a-no-design"
+                >
                   About us
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/about-people" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/about-people"
+                  className="a-no-design"
+                >
                   Our Team
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/about-philosophy" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/about-philosophy"
+                  className="a-no-design"
+                >
                   Our Philosophy
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/ip-assets" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/ip-assets"
+                  className="a-no-design"
+                >
                   Our IP assets
                 </a>
               </div>
@@ -99,51 +120,72 @@ function FooterResponsive() {
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/DAO-projects" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/DAO-projects"
+                  className="a-no-design"
+                >
                   Dao projects
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="container mt-3">
+          {/* <div class="container mt-3">
             <div className="d-flex align-items-center flex-column">
               <div class="new-footer-headline text-uppercase mb-2">
                 Resources
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/resources-blogs" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/resources-blogs"
+                  className="a-no-design"
+                >
                   Blogs
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/resources-news" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/resources-news"
+                  className="a-no-design"
+                >
                   News
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/resources-faqs" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/resources-faqs"
+                  className="a-no-design"
+                >
                   Faqs
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/resources-esg" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/resources-esg"
+                  className="a-no-design"
+                >
                   ESG
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div class="container mt-3">
             <div className="d-flex align-items-center flex-column">
               <div class="new-footer-headline text-uppercase mb-2">Legal</div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/terms-of-use" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/terms-of-use"
+                  className="a-no-design"
+                >
                   Terms of use
                 </a>
               </div>
               <div class="new-footer-text text-uppercase mb-2">
-                <a href="https://www.qube.homeqube.com/privacy-policy" className="a-no-design">
+                <a
+                  href="https://www.qube.homeqube.com/privacy-policy"
+                  className="a-no-design"
+                >
                   Privacy policy
                 </a>
               </div>
@@ -152,10 +194,10 @@ function FooterResponsive() {
 
           <div class="container mt-3">
             <div className="d-flex align-items-center flex-column">
-              <div class="new-footer-headline-2 text-uppercase">
+              {/* <div class="new-footer-headline-2 text-uppercase">
                 Connect with us
-              </div>
-              <div className="d-flex pb-3 mt-2">
+              </div> */}
+              <div className="d-flex pb-3">
                 <a
                   href="https://www.instagram.com/homeqube.ai/"
                   target="_blank"

@@ -11,9 +11,9 @@ function Footer2() {
           <FooterResponsive />
         </div>
         <hr />
-        <div className="container">
+        {/* <div className="container">
           <div className="ms-3">@2022 HOMEQUBE PTE. LTD.™</div>
-        </div>
+        </div> */}
       </footer>
     </>
   );

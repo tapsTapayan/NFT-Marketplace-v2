@@ -1,7 +1,7 @@
 export enum TransactionState {
   DISPLAY,
   PROCESSING,
-  CONFIRMED
+  CONFIRMED,
 }
 
 export interface ShopExchangeInfo {
@@ -15,7 +15,10 @@ export interface CollectionFilter {
   identifier: number | Array<number>;
   // attribute?: { [key: string]: string };
   description: string;
-  qubeClaims : string;
+  description2: string;
+  description3: string;
+  description4: string;
+  qubeClaims: string;
 }
 
 export interface ShopFilter {
@@ -24,6 +27,6 @@ export interface ShopFilter {
 }
 
 export enum OrderDefaultFilter {
-  COLLECTION = 'collection',
-  SHOP = 'shop'
+  COLLECTION = "collection",
+  SHOP = "shop",
 }

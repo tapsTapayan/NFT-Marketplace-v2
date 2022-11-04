@@ -33,7 +33,7 @@ const StructuralLegaciesFilter: React.FC = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/just-for-fun">JFF Just-for-Fun</NavLink>
+          <NavLink to="/just-for-fun">JUST-FOR-FUN (JFF)</NavLink>
         </li>
       </nav>
       <DesContainer>
@@ -67,31 +67,52 @@ const FILTERS = [
     collectionId: "1",
     identifier: -1775657236,
     qubeClaims: "",
-    description:
-      "INTRODUCING HOMEQUBE’S STRUCTURAL LEGACY SYSTEM. EACH STRUCTURAL IS UNIQUE. WE GENERATED 2500 UNIQUE COMBINATIONS (WITHOUT CANTILEVER) FROM OUR SYSTEMS ARCHITECTURE PLATFORM (SAP). THIS LEGACY SYSTEM CAN BE USED TO BUILD LIMITLESS DESIGN CONFIGURATIONS FOR FLAT TOPOGRAPHIES AND UP TO 3 STORY HOUSING, ALLOWING OPEN ARCHITECTURE. OUR COMPOSITE MIX IS MORE SUSTAINABLE, WEATHER RESILIENT, AND EMITS MUCH LESS CARBON THAN REINFORCED CONCRETE/STEEL, AND CAN BE ERGONOMICALLY ASSEMBLED AT THE SITE.",
+    description: "",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3:
+      "The system boasts 2500 unique structural combinations (without cantilever) generated from HomeQube’s System Architecture Platform (SAP). The Legacy System allows open architecture that can be used to build limitless design configurations up to 3-story housing for flat topographies." +
+      "\n\n" +
+      "HomeQube’s composite mix can be ergonomically assembled on-site, is more sustainable, weather resilient, and emits less carbon than traditional reinforced concrete or steel.",
+    description4: "",
   },
   {
     name: "Without Cantilver",
     collectionId: "2",
     identifier: -354695101,
     qubeClaims: "(Qube Claims Available)",
-    description:
-      "INTRODUCING HOMEQUBE’S STRUCTURAL LEGACY SYSTEM. EACH STRUCTURAL IS UNIQUE. WE GENERATED 2500 UNIQUE COMBINATIONS (WITHOUT CANTILEVER) FROM OUR SYSTEMS ARCHITECTURE PLATFORM (SAP). THIS LEGACY SYSTEM CAN BE USED TO BUILD LIMITLESS DESIGN CONFIGURATIONS FOR FLAT TOPOGRAPHIES AND UP TO 3 STORY HOUSING, ALLOWING OPEN ARCHITECTURE. OUR COMPOSITE MIX IS MORE SUSTAINABLE, WEATHER RESILIENT, AND EMITS MUCH LESS CARBON THAN REINFORCED CONCRETE/STEEL, AND CAN BE ERGONOMICALLY ASSEMBLED AT THE SITE.",
+    description: "Introducing:",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3:
+      "The system boasts 2500 unique structural combinations (without cantilever) generated from HomeQube’s System Architecture Platform (SAP). The Legacy System allows open architecture that can be used to build limitless design configurations up to 3-story housing for flat topographies." +
+      "\n\n" +
+      "HomeQube’s composite mix can be ergonomically assembled on-site, is more sustainable, weather resilient, and emits less carbon than traditional reinforced concrete or steel.",
+    description4: "",
   },
   {
     name: "PBUs",
     collectionId: "3",
     identifier: 393799738,
     qubeClaims: "",
-    description:
-      "INTRODUCING HOMEQUBE'S SPHERE BATHROOM. THIS PRE-FABRICATED BATHROOM UNIT(PBU) ASSEMBLY HAS A BATHTUB, LAVATORY, URINAL, WATER CLOSET, AND SHOWER HEAD COMBINED AND SMARTLY ARRANGED ON A SPHERICAL FASHION, AVOIDING PROBLEMATIC TOP DOWN DESIGN CONSTRUCTION.",
+    description: "Introducing:",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3:
+      "The system boasts 2500 unique structural combinations (without cantilever) generated from HomeQube’s System Architecture Platform (SAP). The Legacy System allows open architecture that can be used to build limitless design configurations up to 3-story housing for flat topographies." +
+      "\n\n" +
+      "HomeQube’s composite mix can be ergonomically assembled on-site, is more sustainable, weather resilient, and emits less carbon than traditional reinforced concrete or steel.",
+    description4: "",
   },
   {
     name: "3D PRINTED PARTS",
     collectionId: "4",
     identifier: -16541584,
     qubeClaims: "",
-    description: "",
+    description: "Introducing:",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3:
+      "The system boasts 2500 unique structural combinations (without cantilever) generated from HomeQube’s System Architecture Platform (SAP). The Legacy System allows open architecture that can be used to build limitless design configurations up to 3-story housing for flat topographies." +
+      "\n\n" +
+      "HomeQube’s composite mix can be ergonomically assembled on-site, is more sustainable, weather resilient, and emits less carbon than traditional reinforced concrete or steel.",
+    description4: "",
   },
 ];
 
