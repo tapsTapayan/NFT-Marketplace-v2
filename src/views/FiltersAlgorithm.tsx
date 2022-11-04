@@ -29,12 +29,12 @@ const AlgorithmFilter: React.FC = () => {
           <NavLink to="/system-architecture">SYSTEM ARCHITECTURE</NavLink>
         </li>
         <li>
-          <NavLink to="/products" >
-            PRODUCTS
-          </NavLink>
+          <NavLink to="/products">PRODUCTS</NavLink>
         </li>
         <li>
-          <NavLink to="/algorithm" className="active">ALGORITHM</NavLink>
+          <NavLink to="/algorithm" className="active">
+            ALGORITHM
+          </NavLink>
         </li>
       </nav>
       <DesContainer>
@@ -70,6 +70,9 @@ const FILTERS = [
     qubeClaims: "",
     description:
       "YOU CAN PLACE VARIOUS “ALGORITHM” THAT FIT SYSTEM ARCHITECTURE BOTTOMS-UP APPROACHES.",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

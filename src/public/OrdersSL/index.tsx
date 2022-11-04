@@ -18,7 +18,7 @@ import { InfiniteOrderList } from "../../components/InfiniteOrderList";
 import { LoadingSkeleton } from "../../components/LoadingSkeleton";
 import { PoweredBy } from "../../components/PoweredBy";
 import { CollectionFilter as CollectionFilterComponent } from "../../components/CollectionFilter";
-import { CollectionFilterDescription } from "../../components/CollectionFilterDescription";
+import { CollectionFilterDescriptionHP } from "../../components/CollectionFilterDescription-HP";
 import { ShopFilter as ShopFilterComponent } from "../../components/ShopFilter";
 
 import { useValidateStatus } from "../../hooks/useValidateStatus";
@@ -253,7 +253,7 @@ export const OrdersSL: React.FC<OrdersProps> = ({
       <div className="candy-orders-container" style={style}>
         <div className="candy-container">
           {Boolean(filters) && (
-            <CollectionFilterDescription
+            <CollectionFilterDescriptionHP
               onChange={onChangeCollection}
               selected={selectedCollection}
               candyShop={candyShop}

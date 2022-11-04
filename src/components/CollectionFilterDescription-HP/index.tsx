@@ -27,7 +27,7 @@ interface CollectionFilterProps {
 const Logger = "CandyShopUI/Collection";
 const LIMIT = 10;
 
-export const CollectionFilterDescription: React.FC<CollectionFilterProps> = ({
+export const CollectionFilterDescriptionHP: React.FC<CollectionFilterProps> = ({
   onChange,
   selected,
   candyShop,
@@ -121,7 +121,17 @@ export const CollectionFilterDescription: React.FC<CollectionFilterProps> = ({
             <>
               {selectedManual?.collectionId === filter.collectionId ? (
                 <div className="item-description">
-                  <p className="SL-Des">{filter.description}</p>
+                  {filter.description}
+                  <p className="HP-Des">{filter.description2}</p>
+                  <p className="HP-Des-3">{filter.description3}</p>
+                  {/* <div className="nft-list-com-col ms-5">
+                    <ul className="HP-Des-4">
+                      <li>WITH CANTILEVER</li>
+                      <li>WITHOUT CANTILEVER (QUBE CLAIMS AVAILABLE)</li>
+                      <li>PBUS</li>
+                      <li>3D PRINTED PARTS</li>
+                    </ul>
+                  </div> */}
                 </div>
               ) : (
                 ""

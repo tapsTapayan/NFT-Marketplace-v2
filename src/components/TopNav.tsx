@@ -17,10 +17,7 @@ interface TopNavProps {
   showCurrencyToggle?: boolean;
 }
 
-const ROUTES = [
-  { url: RouteName.multipleCurrencyMarketplace, name: "Dao Projects" },
-  { url: RouteName.ClaimQubes, name: "Claim Qubes" },
-];
+const ROUTES = [{ url: RouteName.ClaimQubes, name: "Claim Qubes" }];
 
 // const OTHER_LAYOUT_ROUTES = [
 //   { url: RouteName.customToken, name: "Custom Token Marketplace" },
@@ -35,6 +32,7 @@ const ROUTES = [
 const DROP_DOWN_MENU = [
   { url: RouteName.HomeDesignFilter, name: "Community Collection" },
   { url: RouteName.MyCollection, name: "My Collection" },
+  { url: RouteName.multipleCurrencyMarketplace, name: "Dao Projects" },
   // { url: RouteName.marketplaceWithUrl, name: "Marketplace With URL" },
   // {
   //   url: RouteName.multipleCurrencyMarketplace,
@@ -94,163 +92,240 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
     prevOpen.current = open;
   }, [open]);
 
+  const [extendNavbar, setExtendNavbar] = useState(false);
   return (
-    <HeaderBar className="navbar navbar-expand-lg HeaderBar">
-      <Logo>
-        <Link to={RouteName.HomePage}>
-          <img alt="" src="/Rework-Logo.svg" />
-        </Link>
-      </Logo>
-      <Menu>
-        <DropdownAnchor
-          ref={anchorRef}
-          onClick={handleToggle}
-          className={
-            DROP_DOWN_MENU.some((item) => item.url === pathname) ? "active" : ""
-          }
-        >
-          Collection <i className="icon-down fas fa-chevron-down" />
-          <Popper
-            open={open}
-            anchorEl={anchorRef.current}
-            role={undefined}
-            transition
-            disablePortal
-          >
-            <Paper>
-              <ClickAwayListener onClickAway={handleClose}>
-                <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
-                  {DROP_DOWN_MENU.map((item) => (
-                    <MenuItem
-                      className={
-                        item.url === pathname ? "active active-submenu" : ""
-                      }
-                      key={item.url}
+    <NavbarContainer>
+      <NavbarInnerContainer>
+        <LeftContainer>
+          <Logo>
+            <Link to={RouteName.HomePage}>
+              <img alt="" src="/Rework-Logo.svg" />
+            </Link>
+          </Logo>
+        </LeftContainer>
+
+        <CenterContainer>
+          <Menu>
+            <DropdownAnchor
+              ref={anchorRef}
+              onClick={handleToggle}
+              className={
+                DROP_DOWN_MENU.some((item) => item.url === pathname)
+                  ? "active"
+                  : ""
+              }
+            >
+              Collection <i className="icon-down fas fa-chevron-down" />
+              <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                transition
+                disablePortal
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList
+                      autoFocusItem={open}
+                      onKeyDown={handleListKeyDown}
                     >
-                      <Link to={item.url}>{item.name}</Link>
-                    </MenuItem>
-                  ))}
-                </MenuList>
-              </ClickAwayListener>
-            </Paper>
-          </Popper>
-        </DropdownAnchor>
-        {ROUTES.map((item) => (
-          <li key={item.url} className={pathname === item.url ? "active" : ""}>
-            <Link to={item.url}>{item.name}</Link>
+                      {DROP_DOWN_MENU.map((item) => (
+                        <MenuItem
+                          className={
+                            item.url === pathname ? "active active-submenu" : ""
+                          }
+                          key={item.url}
+                        >
+                          <Link to={item.url}>{item.name}</Link>
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Popper>
+            </DropdownAnchor>
+            {ROUTES.map((item) => (
+              <li
+                key={item.url}
+                className={pathname === item.url ? "active" : ""}
+              >
+                <Link to={item.url}>{item.name}</Link>
+              </li>
+            ))}
+            <DropdownAnchor_Sub ref={anchorRef_sub} onClick={handleToggle_sub}>
+              Other Products <i className="icon-down fas fa-chevron-down" />
+              <Popper
+                open={open_sub}
+                anchorEl={anchorRef_sub.current}
+                role={undefined}
+                transition
+                disablePortal
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose_sub}>
+                    <MenuList
+                      autoFocusItem={open_sub}
+                      onKeyDown={handleListKeyDown_sub}
+                    >
+                      <MenuItem>
+                        <a
+                          href="https://www.homeqube.io/"
+                          key={"homeqube"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="qube-text"
+                        >
+                          HOMEQUBE.IO{" "}
+                          <i className="fas fa-solid fa-arrow-right mx-2" />
+                        </a>
+                      </MenuItem>
+                      <MenuItem>
+                        <a
+                          href="https://www.homeqube.com/"
+                          key={"homeqube"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="qube-text"
+                        >
+                          HOMEQUBE.COM{" "}
+                          <i className="fas fa-solid fa-arrow-right mx-3" />
+                        </a>
+                      </MenuItem>
+                      <MenuItem>
+                        <a
+                          href="https://www.homeqube.ai/"
+                          key={"homeqube"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="qube-text"
+                        >
+                          HOMEQUBE.AI{" "}
+                          <i className="fas fa-solid fa-arrow-right mx-3" />
+                        </a>
+                      </MenuItem>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Popper>
+            </DropdownAnchor_Sub>
+          </Menu>
+        </CenterContainer>
+
+        <RightContainer>
+          {showCurrencyToggle && <CurrencyToggle />}
+          <li>
+            <a
+              href="https://t.me/homeqube"
+              key={"telegram"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/telegram2.svg" alt="" />
+            </a>
+            <a
+              href="https://discord.gg/JhQXmjm59e"
+              key={"telegram"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/discord2.svg" alt="" className="mx-3" />
+            </a>
           </li>
-        ))}
-        {/* <li className="mx-3">
-          <a
-            href="https://www.homeqube.ai/"
-            key={"homeqube"}
-            target="_blank"
-            rel="noreferrer"
-          >
-            HOMEQUBE.AI
-          </a>
-        </li> */}
-        <DropdownAnchor_Sub ref={anchorRef_sub} onClick={handleToggle_sub}>
-          Other Products <i className="icon-down fas fa-chevron-down" />
-          <Popper
-            open={open_sub}
-            anchorEl={anchorRef_sub.current}
-            role={undefined}
-            transition
-            disablePortal
-          >
-            <Paper>
-              <ClickAwayListener onClickAway={handleClose_sub}>
-                <MenuList
-                  autoFocusItem={open_sub}
-                  onKeyDown={handleListKeyDown_sub}
-                >
-                  <MenuItem>
-                    <a
-                      href="https://www.homeqube.io/"
-                      key={"homeqube"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="qube-text"
-                    >
-                      HOMEQUBE.IO{" "}
-                      <i className="fas fa-solid fa-arrow-right mx-2" />
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="https://www.homeqube.com/"
-                      key={"homeqube"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="qube-text"
-                    >
-                      HOMEQUBE.COM{" "}
-                      <i className="fas fa-solid fa-arrow-right mx-3" />
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="https://www.homeqube.ai/"
-                      key={"homeqube"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="qube-text"
-                    >
-                      HOMEQUBE.AI{" "}
-                      <i className="fas fa-solid fa-arrow-right mx-3" />
-                    </a>
-                  </MenuItem>
-                </MenuList>
-              </ClickAwayListener>
-            </Paper>
-          </Popper>
-        </DropdownAnchor_Sub>
-        <li>
-          <a
-            href="https://t.me/homeqube"
-            key={"telegram"}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/telegram2.svg" alt="" />
-          </a>
-          <a
-            href="https://discord.gg/JhQXmjm59e"
-            key={"telegram"}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/discord2.svg" alt="" className="mx-3" />
-          </a>
-        </li>
-      </Menu>
-      {/* <MobileNavigation />
-      <Navigation /> */}
-      {showCurrencyToggle && <CurrencyToggle />}
-      <Wallet>
-        {wallet ? (
-          <ConnectButton className="wallet-width" />
-        ) : (
-          <ConnectButton className="wallet-width-connect">
-            Connect Wallet
-          </ConnectButton>
-        )}
-      </Wallet>
-    </HeaderBar>
+          <Wallet>
+            {wallet ? (
+              <ConnectButton className="wallet-width" />
+            ) : (
+              <ConnectButton className="wallet-width-connect">
+                Connect Wallet
+              </ConnectButton>
+            )}
+          </Wallet>
+        </RightContainer>
+        <OpenLinksButton
+          onClick={() => {
+            setExtendNavbar((curr) => !curr);
+          }}
+        >
+          {extendNavbar ? (
+            <i className="fas fa fa-solid fa-xmark fa-2xl"></i>
+          ) : (
+            <i className="fas fa fa-solid fa-bars fa-2xl" />
+          )}
+        </OpenLinksButton>
+      </NavbarInnerContainer>
+    </NavbarContainer>
   );
 };
 
-const HeaderBar = styled.div`
+const NavbarContainer = styled.div`
   display: flex;
+
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   background-color: #0a0909;
   backdrop-filter: blur(5px);
-  padding-right: 4%;
-  padding-left: 4%;
+`;
+
+const LeftContainer = styled.div`
+  flex: 20%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 1%;
+`;
+const CenterContainer = styled.div`
+  flex: 60%;
+  display: flex;
+  align-items: center;
+  padding-top: 1%;
+  justify-content: center;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+const RightContainer = styled.div`
+  flex: 20%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3%;
+  padding-right: 60px;
+
+  li {
+    display: flex;
+    padding-top: 5%;
+  }
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+const OpenLinksButton = styled.button`
+  width: 70px;
+  height: 30px;
+  margin-top: 5.5%;
+  margin-right: 5%;
+  background: none;
+  border: none;
+  color: white;
+  @media (min-width: 1100px) {
+    display: none;
+  }
+`;
+
+const NavbarInnerContainer = styled.div`
+  width: 100%;
+  height: 10rem;
+  display: flex;
+`;
+const NavbarExtendedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1100px) {
+    display: none;
+  }
 `;
 
 const DropdownAnchor = styled.li`
@@ -277,8 +352,6 @@ const DropdownAnchor = styled.li`
     z-index: 4;
 
     a {
-      padding-top: 4px;
-      padding-bottom: 4px;
       color: #fff;
       font-family: "Rajdhani";
       font-style: normal;
@@ -315,8 +388,6 @@ const DropdownAnchor_Sub = styled.li`
     height: auto;
 
     a {
-      padding-top: 4px;
-      padding-bottom: 4px;
       color: #fff;
       font-family: "Rajdhani";
       font-style: normal;
@@ -332,10 +403,10 @@ const DropdownAnchor_Sub = styled.li`
 `;
 
 const Wallet = styled.ul`
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   .wallet-adapter-button {
     margin: 0 auto;
@@ -344,11 +415,11 @@ const Wallet = styled.ul`
 `;
 
 const ConnectButton = styled(WalletMultiButton)`
-  padding: 6px 16px;
+  /* padding: 6px 16px; */
   border-radius: 50rem !important;
   background-color: #f4f4f8;
-  margin: 0 auto;
-  margin-top: 1.5rem !important;
+  /* margin: 0 auto;
+  margin-top: 1.5rem !important; */
   font-family: "Rajdhani", sans-serif !important;
   width: 169px;
   height: 56px;
@@ -361,8 +432,8 @@ const ConnectButton = styled(WalletMultiButton)`
 `;
 
 const Logo = styled.div`
-  flex: 0 0 auto;
-  margin-right: 10px;
+  /* flex: 0 0 auto; */
+  /* margin-right: 5rem; */
 
   img {
     height: 3rem;
@@ -373,15 +444,14 @@ const Menu = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 0px;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   margin-bottom: 0;
-  padding-left: 10%;
-  gap: 6%;
+  /* padding-left: 10%;
+  gap: 6%; */
 
   li {
-    margin: 0 12px;
+    margin: 0 40px;
 
     color: #fff;
     font-family: "Rajdhani";

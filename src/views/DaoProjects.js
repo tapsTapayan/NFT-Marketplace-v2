@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import raffleImg from "../img/Pablo_Residence_2.png";
-import raffleImg2 from "../img/ReworkRaf.png";
-import Modal from "./RaffleModal/Modal";
+import React from "react";
 
-function RaffleDraw() {
-  const [modalOpen, setOpenModal] = useState(false);
+function DaoProjects() {
   return (
-    <>
+    <div>
       <section className="pt-5 text-sm-start text-light">
-        <div className="raffle-sec">
-          <div className="raffle-img-main">
+        <div className="raffle-sec-dao">
+          {/* <div className="raffle-img-main">
             <img src={raffleImg2} alt="" />
+          </div> */}
+          <div className="text-center">
+            <h1 className="nft-subtext-1 text-uppercase">DAO Projects</h1>
+            <p class="text-light nft-subtext-2">Coming Soon</p>
           </div>
+
           <div className="raffle-des-main">
-            <h1 className="text-uppercase raffle-sub-title pt-3">
+            {/* <h1 className="text-uppercase raffle-sub-title pt-3">
               Homeqube Raffle Draw
             </h1>
             <h3 className="raffle-sub-title-2 text-uppercase text-light">
@@ -36,12 +36,12 @@ function RaffleDraw() {
                 Secure your entry
                 <img src="/icons8-right-24.png" className="ms-1" alt="image" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
-export default RaffleDraw;
+export default DaoProjects;

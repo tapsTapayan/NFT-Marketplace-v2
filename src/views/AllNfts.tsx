@@ -22,13 +22,11 @@ const AllNftFilter: React.FC = () => {
       <nav className="candy-orders-filter menu text-uppercase pb-3 pt-3">
         <li>
           <NavLink to="/all-nfts" className="active">
-           ALL
+            ALL
           </NavLink>
         </li>
         <li>
-          <NavLink to="/structural-legacies">
-            Structural Legacies
-          </NavLink>
+          <NavLink to="/structural-legacies">Structural Legacies</NavLink>
         </li>
         <li>
           <NavLink to="/home-designs">Home Designs</NavLink>
@@ -75,6 +73,9 @@ const FILTERS = [
     identifier: 0,
     qubeClaims: "",
     description: "",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

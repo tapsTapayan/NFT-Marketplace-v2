@@ -70,6 +70,9 @@ const FILTERS = [
     qubeClaims: "",
     description:
       "YOU CAN PLACE VARIOUS HOME DESIGNS “PARTS” THAT FIT SYSTEM ARCHITECTURE BOTTOMS-UP APPROACHES. ",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
   {
     name: "PBU",
@@ -78,6 +81,9 @@ const FILTERS = [
     qubeClaims: "",
     description:
       "YOU CAN PLACE VARIOUS HOME DESIGNS “PARTS” THAT FIT SYSTEM ARCHITECTURE BOTTOMS-UP APPROACHES. ",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

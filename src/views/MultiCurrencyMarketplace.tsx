@@ -82,6 +82,9 @@ const FILTERS = [
     identifier: -0,
     qubeClaims: "",
     description: "",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
   {
     name: "Commercial/Residential",
@@ -89,6 +92,9 @@ const FILTERS = [
     identifier: -16541584,
     qubeClaims: "",
     description: "",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

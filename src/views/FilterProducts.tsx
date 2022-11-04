@@ -31,7 +31,7 @@ const ProductsFilter: React.FC = () => {
         </li>
         <li>
           <NavLink to="/just-for-fun" className="active">
-            JFF Just-for-Fun
+            JUST-FOR-FUN (JFF)
           </NavLink>
         </li>
       </nav>
@@ -67,6 +67,9 @@ const FILTERS = [
     identifier: [-1434943395, 691144404],
     qubeClaims: "",
     description: "",
+    description2: "HomeQube’s Structural Legacy System.",
+    description3: "",
+    description4: "",
   },
 ];
 

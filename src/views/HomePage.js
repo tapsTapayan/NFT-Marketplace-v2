@@ -9,6 +9,8 @@ import MarketplaceWithFilter from "./MarketplaceWithFilter";
 import LandingPage from "./landingpage";
 import RaffleDraw from "../components/RaffleDraw";
 import { useTranslation } from "react-i18next";
+import DaoProjects from "./DaoProjects";
+import PropertyFL from "./PropertyFL";
 
 function HomePage() {
   const { t, i18n } = useTranslation();
@@ -52,16 +54,17 @@ function HomePage() {
       title: `${t("ITEM2")}`,
       step1: `Step 1: ${t("ITEM2-SUBITEM1")}`,
       step2: `Step 2: ${t("ITEM2-SUBITEM2")}`,
+      steplink1: `https://www.homeqube.io/home-designs`,
+      linkname1: `${t("ITEM2-LINKITEM3")}.`,
+      othertext1: `${t("ITEM2-SUBITEM2.1")}`,
       step3: `Step 3: ${t("ITEM2-SUBITEM3")}`,
       step4: `Step 4: ${t("ITEM2-SUBITEM4")}`,
       step5: `Step 5: ${t("ITEM2-SUBITEM5")}`,
-      step8: `${t("ITEM2-SUBITEM6")}`,
+      step8: ``,
       //--------------Display Attributes--------------
+
       state6: `d-none`, //Display None for this Step
       state7: `d-none`, //Display None for this Step
-      statelink: `d-none`, //Display None for this Link
-      statelink3: `d-none`, //Display None for this Link
-      statelink6: `d-none`, //Display None for this Link
     },
     {
       title: `${t("ITEM3")}`,
@@ -95,13 +98,12 @@ function HomePage() {
       linkname1: `(https://explorer.solana.com/)`, //For Link Name
       othertext1: `.`, //For Othertext
       steplink2: `/claimqubes`, //For Links
-      linkname2: `claim qubes`, //For Link Name
-      othertext2: `.`, //For Othertext
+      linkname2: `Claim Qubes`, //For Link Name
+      othertext2: `${t("ITEM4-SUBITEM3.2")}`, //For Othertext
       steplink3: `mailto:about@homeqube.com`, //For Links
       linkname3: ` about@homeqube.com`, //For Link Name
       othertext3: `.`, //For Othertext
       //--------------Display Attributes--------------
-      state8: `d-none`, //Display None for this Step
     },
     {
       title: `${t("ITEM5")}`,
@@ -183,16 +185,14 @@ function HomePage() {
               </h1>
 
               <p className="intro-sentence mt-4">
-                We are solana based NFT “launchpad-marketplace” for home
-                manufacturing, from 3D <br />
-                printed parts, home designs, home system algorithms, decors,
-                fixtures furnitures,
-                <br />
-                prototypes, and related others to homebuilding both for the
-                metaverse and IRL.
+                HomeQube.io is a Solana-based launchpad and marketplace of NFTs
+                for home manufacturing needs. The platform covers home designs,
+                home system algorithms, 3D-printed parts, decors, furniture,
+                fixtures, prototypes, AR, and other homebuilding materials
+                suited to a user’s metaverse and physical homebuilding needs.
               </p>
 
-              <div className="intro-btn2">
+              <div className="intro-btn2 d-sm">
                 <a href="https://mint.homeqube.io/" className="a-link">
                   <button
                     onclick="window.open('https://mint.homeqube.io/')"
@@ -584,6 +584,15 @@ function HomePage() {
             <NftNavLinks />
         </nav> */}
         {/* <Cards /> */}
+      </section>
+      <section className="bg-raffle">
+        <DaoProjects />
+        {/* <raffleBanner /> */}
+      </section>
+
+      <section className="bg-raffle-2">
+        <PropertyFL />
+        {/* <raffleBanner /> */}
       </section>
 
       {/* <section className="text-center content-eco1-bg p-5">
