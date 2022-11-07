@@ -8,7 +8,7 @@ function RaffleDraw() {
   const [modalOpen, setOpenModal] = useState(false);
   return (
     <>
-      <section className="pt-5 text-sm-start text-light">
+      <section className="raffle-sec-res pt-5 text-light">
         <div className="raffle-sec">
           <div className="raffle-img-main">
             <img src={raffleImg2} alt="" />
