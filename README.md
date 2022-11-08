@@ -1,4 +1,3 @@
-#TEST
 
 # Candy Shop Storefront
 
