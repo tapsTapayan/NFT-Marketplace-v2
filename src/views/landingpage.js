@@ -5,8 +5,11 @@ function LandingPage() {
   return (
     <>
       <section
-        className="align-center text-uppercase text-center nft-raffle-sec-2"
-        style={{ fontSize: "2rem" }}
+        className="align-center text-uppercase text-center nft-raffle-sec-1"
+        style={{ 
+          fontSize: "2rem",  
+          margin: 'auto 0'
+        }}
       >
         <section className="nft-collection-sec text-light">
           <div>
@@ -41,7 +44,7 @@ function LandingPage() {
             </ul>
           </h1>
         </section>
-        <div className="pt-3">
+        <div className="pt-4">
           <NavLink to="/home-designs" className="a-link">
             <button className="button1 btn btn-lg rounded-pill" type="button">
               View Collections

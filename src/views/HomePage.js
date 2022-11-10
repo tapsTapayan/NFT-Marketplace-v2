@@ -566,12 +566,14 @@ function HomePage() {
       </section>
       <div className="bg-collection"></div>
 
-      <section className="text-center bg-nft-collection eco-pt-5">
-        <section className="pt-5 text-center text-center  text-sm-start">
+      <section className="text-center bg-nft-collection" 
+              style={{height: '100vh'}}>
+        
+        <section className="text-center text-center text-sm-start">
           {/* <div className="col-md eco-1-title">
             <p className="ai-title-home">NFT COLLECTIONS</p>
           </div> */}
-          <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p>
+          <p className="q-tokenomics-showcase-intro-lead p-4 text-uppercase"></p>
 
           {/* <center>
             <div className="faq-rectangle"></div>
