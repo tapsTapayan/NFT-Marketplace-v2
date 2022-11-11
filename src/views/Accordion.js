@@ -56,7 +56,6 @@ const Accordion = ({
       {isActive && (
         <div
           className="accordion-content carbon-text"
-          style={{ fontSize: "1.25rem" }}
         >
           <div class={state1}>
             {step1}

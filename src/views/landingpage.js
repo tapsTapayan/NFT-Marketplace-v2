@@ -20,33 +20,39 @@ function LandingPage() {
           </div>
         </section>
         <section className="collection-sec">
-          <h1 className="pt-5 mx-5 text-light  collection-sub-text-1">
-            <img src={qube} className="mx-3" alt="" />
-            community collections
+          <div className="collection-item-cont">
+            <h1 className="pt-5 mr-5 text-light collection-sub-text-1">
+              <img src={qube} className="mx-3" alt="" />
+              community collections
+            </h1>
             <ul className="ms-3 pt-3 list-collection">
               <li className="text-start">Structural Legacies</li>
               <li className="text-start pt-2">Home Designs</li>
               <li className="text-start pt-2">System Architecture</li>
               <li className="text-start pt-2">Products</li>
             </ul>
-          </h1>
-
-          <h1 className="pt-5 mx-5 text-light collection-sub-text-1">
-            <img src={qube} className="mx-3" alt="" />
-            dao projects
+          </div>
+          <div className="collection-item-cont">
+            <h1 className="pt-5 mx-5 text-light collection-sub-text-1">
+              <img src={qube} className="mx-3" alt="" />
+              dao projects
+            </h1>
             <ul className="ms-3 pt-3 list-collection">
               <li className="text-start">Hotel</li>
               <li className="text-start pt-2">Commercial</li>
               <li className="text-start pt-2">Residential</li>
             </ul>
-          </h1>
+          </div>
+          
+          
         </section>
         <div className="pt-3">
-          <NavLink to="/home-designs" className="a-link">
-            <button className="button1 btn btn-lg rounded-pill" type="button">
+            <button className="button1 btn btn-lg rounded-pill view-collection-btn" type="button">
               View Collections
               <img src="/icons8-right-24.png" className="p-1" alt="image" />
             </button>
+          <NavLink to="/home-designs" className="a-link">
+            
           </NavLink>
         </div>
 
