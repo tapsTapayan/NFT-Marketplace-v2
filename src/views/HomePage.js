@@ -192,8 +192,8 @@ function HomePage() {
                 suited to a user’s metaverse and physical homebuilding needs.
               </p>
 
-              <div className="intro-btn2 d-sm">
-                <a href="https://mint.homeqube.io/" className="a-link">
+              <div className="intro-btn2 d-sm ">
+                <a href="https://mint.homeqube.io/" className="a-link intro-btn-margin">
                   <button
                     onclick="window.open('https://mint.homeqube.io/')"
                     className="button2 btn btn-lg rounded-pill"
@@ -388,7 +388,7 @@ function HomePage() {
         </div>
       </section> */}
 
-      <section className="content-eco1-bg"></section>
+      {/* <section className="content-eco1-bg"></section> */}
       {/* <img
           src="/Left-Box-1.svg"
           className="box-animation-1 img-fluid d-sm-none d-md-block"
@@ -405,8 +405,8 @@ function HomePage() {
         <br />
         <br /> */}
 
-      <div></div>
-      <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p>
+      {/* <div></div>
+      <p className="q-tokenomics-showcase-intro-lead p-3 text-uppercase"></p> */}
       {/* <center>
           <div className="faq-rectangle"></div>
           <br />
@@ -481,7 +481,7 @@ function HomePage() {
       </section>
 
       <section
-        className="ms-5 text-dark text-start bg-white"
+        className="getting-started-cont text-dark text-start bg-white"
         style={{ fontSize: "2rem", paddingBottom: "5rem" }}
       >
         <p className="getting-start-title">Getting started</p>
@@ -573,13 +573,11 @@ function HomePage() {
           {/* <div className="col-md eco-1-title">
             <p className="ai-title-home">NFT COLLECTIONS</p>
           </div> */}
-          <p className="q-tokenomics-showcase-intro-lead p-4 text-uppercase"></p>
+          {/* <p className="q-tokenomics-showcase-intro-lead p-4 text-uppercase"></p> */}
 
           {/* <center>
             <div className="faq-rectangle"></div>
           </center> */}
-          <br />
-          <br />
           <LandingPage />
         </section>
         {/* <nav className="Menu">
@@ -587,12 +585,12 @@ function HomePage() {
         </nav> */}
         {/* <Cards /> */}
       </section>
-      <section className="bg-raffle">
+      <section className="bg-daoprojects">
         <DaoProjects />
         {/* <raffleBanner /> */}
       </section>
 
-      <section className="bg-raffle-2">
+      <section className="bg-propertyFL">
         <PropertyFL />
         {/* <raffleBanner /> */}
       </section>

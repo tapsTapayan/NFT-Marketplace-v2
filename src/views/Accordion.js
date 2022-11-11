@@ -112,8 +112,7 @@ const Accordion = ({
 
       {isActive && (
         <div
-          class="accordion-content carbon-text"
-          style={{ fontSize: "1.25rem", fontWeight: 600 }}
+          className="accordion-content carbon-text"
         >
           <div className={state1} >
             {boldTextStep1 === "" ? step1 : <span dangerouslySetInnerHTML={{ __html: boldTextStep1}}></span>}
