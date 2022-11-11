@@ -8,7 +8,7 @@ function Footer2() {
       <footer className="p-3 bg-black text-white py-5">
         <div class="container px-4">
           <FooterWeb />
-          <FooterResponsive />
+          {/* <FooterResponsive /> */}
         </div>
         <hr />
         {/* <div className="container">
