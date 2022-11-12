@@ -2776,18 +2776,25 @@ h4 {
 
 .bg-nft-collection {
   background-color: #1c2433;
-  height: 75vh;
+  height: 90vh;
+  max-height: auto;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: row;
 }
 
 .nft-raffle-sec-2 {
   margin-top: 5%;
+  font-size: 2rem;
 }
 
 .nft-collection-sec {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .nft-subtext-1 {
@@ -2796,6 +2803,7 @@ h4 {
   font-weight: 700;
   font-size: 3.5rem;
 }
+
 .nft-subtext-2 {
   font-family: "Rajdhani";
   font-style: normal;
@@ -2808,8 +2816,10 @@ h4 {
   justify-content: center;
   /* align-content: center; */
   flex-direction: row;
-  gap: 3.7rem;
+  gap: 4rem;
+  margin-bottom: 1.5rem;
 }
+
 .collection-sub-text-1 {
   font-family: "Rajdhani";
   font-style: normal;

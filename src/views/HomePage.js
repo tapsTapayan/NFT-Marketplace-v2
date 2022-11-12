@@ -566,10 +566,10 @@ function HomePage() {
       </section>
       <div className="bg-collection"></div>
 
-      <section className="text-center bg-nft-collection" 
-              style={{height: '100vh'}}>
+      <section className="text-center bg-nft-collection">
+        <LandingPage />
         
-        <section className="text-center text-center text-sm-start">
+        <section>
           {/* <div className="col-md eco-1-title">
             <p className="ai-title-home">NFT COLLECTIONS</p>
           </div> */}
@@ -578,8 +578,8 @@ function HomePage() {
           {/* <center>
             <div className="faq-rectangle"></div>
           </center> */}
-          <LandingPage />
         </section>
+
         {/* <nav className="Menu">
             <NftNavLinks />
         </nav> */}
