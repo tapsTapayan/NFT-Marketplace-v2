@@ -5,7 +5,7 @@ function LandingPage() {
   return (
     <>
       <section className="text-uppercase nft-raffle-sec-1">
-        <section className="text-light">
+        <section className="text-light collection-headings-cont">
             <div>
               <h1 className="nft-subtext-1">NFT Collections</h1>
             </div>

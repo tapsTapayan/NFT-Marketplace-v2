@@ -104,10 +104,10 @@ const Accordion = ({
           <h4 className="faq-head d-flex justify-content-between">
             <div>{title}</div>
 
-            <div>{isActive ? "▲" : "▼"}</div>
+            <div>{isActive ? <i class="fas fa-angle-up"></i> : <i class="fas fa-angle-down"></i>}</div>
           </h4>
         </div>
-        <hr />
+        {/* <hr /> */}
       </div>
 
       {isActive && (
@@ -128,7 +128,7 @@ const Accordion = ({
               </a>
               &nbsp;{othertext}
             </span>
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state2}>
@@ -145,7 +145,7 @@ const Accordion = ({
               </a>
               &nbsp;{othertext1}
             </span>
-            <br /> <br />
+            <br />
           </div>
           
           <div className={state3}>
@@ -161,24 +161,24 @@ const Accordion = ({
               </a>
               &nbsp;{othertext2}
             </span>
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state4}>
             {boldTextStep4 === "" ? step4 : <span dangerouslySetInnerHTML={{ __html: boldTextStep4}}></span>}
 
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state5}>
             {boldTextStep5 === "" ? step5 : <span dangerouslySetInnerHTML={{ __html: boldTextStep5}}></span>}
 
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state6}>
             {step6}
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state7}>
@@ -194,13 +194,14 @@ const Accordion = ({
               </a>
               &nbsp;{othertext3}
             </span>
-            <br /> <br />
+            <br />
           </div>
 
           <div className={state8}>{step8}</div>
-          <hr />
+          
         </div>
       )}
+      <hr />
     </div>
   );
 };
