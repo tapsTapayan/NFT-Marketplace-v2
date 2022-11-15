@@ -4,51 +4,56 @@ import qube from "../img/qube-icon.svg";
 function LandingPage() {
   return (
     <>
-      <section
-        className="align-center text-uppercase text-center nft-raffle-sec-2"
-        style={{ fontSize: "2rem" }}
-      >
-        <section className="nft-collection-sec text-light">
-          <div>
-            <h1 className="nft-subtext-1">NFT Collection</h1>
-          </div>
-          <div>
-            <p className="text-light nft-subtext-2">
-              Our marketplace has four types of NFT collections categories.
-              These are:
-            </p>
-          </div>
+      <section className="text-uppercase nft-raffle-sec-1">
+        <section className="text-light">
+            <div>
+              <h1 className="nft-subtext-1">NFT Collections</h1>
+            </div>
+            <div>
+              <p className="text-light text-capitalize nft-subtext-2">
+                Our marketplace has four types of NFT collections categories.
+                These are:
+              </p>
+            </div>
         </section>
-        <section className="collection-sec">
-          <h1 className="pt-5 mx-5 text-light  collection-sub-text-1">
-            <img src={qube} className="mx-3" alt="" />
-            community collections
-            <ul className="ms-3 pt-3 list-collection">
-              <li className="text-start">Structural Legacies</li>
-              <li className="text-start pt-2">Home Designs</li>
-              <li className="text-start pt-2">System Architecture</li>
-              <li className="text-start pt-2">Products</li>
-            </ul>
-          </h1>
-
-          <h1 className="pt-5 mx-5 text-light collection-sub-text-1">
-            <img src={qube} className="mx-3" alt="" />
-            dao projects
-            <ul className="ms-3 pt-3 list-collection">
-              <li className="text-start">Hotel</li>
-              <li className="text-start pt-2">Commercial</li>
-              <li className="text-start pt-2">Residential</li>
-            </ul>
-          </h1>
-        </section>
-        <div className="pt-3">
-          <NavLink to="/home-designs" className="a-link">
-            <button className="button1 btn btn-lg rounded-pill" type="button">
-              View Collections
-              <img src="/icons8-right-24.png" className="p-1" alt="image" />
-            </button>
-          </NavLink>
-        </div>
+          <section className="collection-sec">
+            <div className="collection-item-cont collection-cont">
+              <h1 className="pt-5 mr-5 text-light collection-sub-text-1">
+                <img src={qube} className="mx-3" alt="" />
+                community collections
+              </h1>
+              <ul className="ms-3 pt-3 list-collection">
+                <li className="text-start">Structural Legacies</li>
+                <li className="text-start pt-2">Home Designs</li>
+                <li className="text-start pt-2">System Architecture</li>
+                <li className="text-start pt-2">Products</li>
+              </ul>
+            </div>
+            <div className="collection-item-cont">
+              <h1 className="pt-5 mx-2 text-light collection-sub-text-1">
+                <img src={qube} className="mx-3" alt="" />
+                dao projects
+              </h1>
+              <ul className="ms-3 pt-3 list-collection">
+                <li className="text-start">Hotel</li>
+                <li className="text-start pt-2">Commercial</li>
+                <li className="text-start pt-2">Residential</li>
+              </ul>
+            </div>
+            
+            
+          </section>
+          <div className="pt-4">
+              <button className="button1 btn btn-lg rounded-pill view-collection-btn" type="button">
+                View Collections
+                <img src="/icons8-right-24.png" className="p-1" alt="image" />
+              </button>
+            <NavLink to="/home-designs" className="a-link">
+              
+            </NavLink>
+          </div>
+      </section>
+       
 
         {/* <div className="container">
           <div class="row justify-content-around">
@@ -92,7 +97,6 @@ function LandingPage() {
         {/* </div>
         <br />
         <br /> */}
-      </section>
     </>
   );
 }

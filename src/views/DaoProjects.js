@@ -9,8 +9,8 @@ function DaoProjects() {
             <img src={raffleImg2} alt="" />
           </div> */}
           <div className="text-center">
-            <h1 className="nft-subtext-1 text-uppercase">DAO Projects</h1>
-            <p class="text-light nft-subtext-2">Coming Soon</p>
+            <h1 className="dao-subtext-1 text-uppercase">DAO Projects</h1>
+            <p class="text-light dao-subtext-2">Coming Soon</p>
           </div>
 
           <div className="raffle-des-main">

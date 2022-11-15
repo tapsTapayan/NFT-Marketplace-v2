@@ -69,7 +69,7 @@ footer {
   color: dark;
   text-decoration: none;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .footer-icon {
     margin-top: 1rem;
   }
@@ -78,7 +78,7 @@ footer {
   .footer-icon {
     margin-top: 1rem;
   }
-}
+} */
 .footer-text {
   text-align: left;
   size: 18px;
@@ -89,7 +89,7 @@ footer {
   float: left;
   height: 155px;
 }
-@media (min-width: 250px) {
+/* @media (min-width: 250px) {
   .footer-logo {
     float: none;
   }
@@ -98,7 +98,7 @@ footer {
   .footer-logo {
     float: left;
   }
-}
+} */
 
 .list {
   list-style: none;
@@ -117,7 +117,7 @@ footer {
   text-align: left;
   color: white;
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .footer-text-2 {
     text-align: center;
   }
@@ -148,7 +148,7 @@ footer {
     padding-left: 15px;
     text-align: left;
   }
-}
+} */
 .exchange-button-more {
   background: linear-gradient(44.73deg, #7c7c7c 11.32%, #4e4e4e 92.96%);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -567,11 +567,17 @@ body.active-modal {
 
 .carbon-text {
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
   line-height: 35px;
-  color: #5a5a5a;
+  color: #3f3f3f;
   text-align: left;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .carbon-text {
+    line-height: 25px;
+  }
 }
 
 .carbon-text-blog {
@@ -592,7 +598,7 @@ iframe {
   width: "640px";
   margin: 0 auto;
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .if-container,
   iframe {
     width: "300px";
@@ -621,7 +627,7 @@ iframe {
   iframe {
     width: "640px";
   }
-}
+} */
 
 iframe {
   display: block;
@@ -779,7 +785,7 @@ a:active {
   font-weight: bold;
 }
 
-@media (max-width: 990px) {
+/* @media (max-width: 990px) {
   .Menu {
     display: none !important;
     opacity: 1;
@@ -816,7 +822,7 @@ a:active {
     right: 1.5%;
     cursor: pointer;
   }
-}
+} */
 
 .conwid-50 {
   width: 50%;
@@ -835,7 +841,7 @@ a:active {
   justify-content: center !important;
 }
 
-@media (min-width: 250px) {
+/* @media (min-width: 250px) {
   .conwid-50 {
     width: auto;
   }
@@ -862,9 +868,9 @@ a:active {
   .wallet-width {
     width: 155px;
   }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .conwid-50 {
     width: 70%;
   }
@@ -895,7 +901,7 @@ a:active {
   .wallet-width {
     width: 185px;
   }
-}
+} */
 .shareText {
   font-weight: 600;
   font-size: 1rem;
@@ -1112,7 +1118,7 @@ h4 {
   flex-direction: row;
 }
 
-@media (min-width: 250px) {
+/* @media (min-width: 250px) {
   .display {
     display: flex;
     flex-direction: column;
@@ -1154,9 +1160,9 @@ h4 {
     flex-direction: column;
     justify-content: space-around;
   }
-}
+} */
 
-@media (min-width: 1230px) {
+/* @media (min-width: 1230px) {
   .display {
     display: flex;
     flex-direction: row;
@@ -1202,7 +1208,7 @@ h4 {
     flex-direction: row;
     padding: 0.75rem;
   }
-}
+} */
 
 .header-site-design {
   width: 100%;
@@ -1265,7 +1271,7 @@ h4 {
   margin-left: 4%;
 }
 
-@media (min-width: 250px) {
+/* @media (min-width: 250px) {
   .cover-image-div {
     height: 250px;
   }
@@ -1285,9 +1291,9 @@ h4 {
     width: 130px;
     height: 130px;
   }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .cover-image-div {
     height: 370px;
   }
@@ -1309,9 +1315,9 @@ h4 {
   .profile-name-2 {
     width: 500px !important;
   }
-}
+} */
 
-@media (min-width: 1230px) {
+/* @media (min-width: 1230px) {
   .cover-image-div {
     height: 370px;
   }
@@ -1321,7 +1327,7 @@ h4 {
   .profile-image-site {
     margin-left: 10rem;
   }
-}
+} */
 
 .plus-sign {
   display: none;
@@ -1336,25 +1342,25 @@ h4 {
   margin-top: 1rem;
   white-space: pre-wrap !important;
 }
-@media (min-width: 250px) {
+/* @media (min-width: 250px) {
   .item-description {
-    /* justify-content: center;
+    justify-content: center;
     margin-right: 4%;
     margin-left: 4%;
     padding-right: 0;
-    padding-left: 0; */
+    padding-left: 0;
   }
 }
 
 @media (min-width: 768px) {
   .item-description {
-    /* justify-content: center;
+    justify-content: center;
     margin-right: 11%;
     margin-left: 11%;
     padding-right: 3rem;
-    padding-left: 3rem; */
+    padding-left: 3rem;
   }
-}
+} */
 .showcase-intro {
   font-style: normal;
   /* font-weight: bold; */
@@ -1417,10 +1423,22 @@ h4 {
   text-transform: uppercase;
   text-align: center;
 }
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .intro {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .p-5 {
+    padding: 1rem !important;
+  }
+}
+
 .intro-sentence {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 20px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -1435,6 +1453,28 @@ h4 {
   justify-content: first baseline;
   padding-top: 5%;
 }
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .intro-btn2 {
+    flex-direction:column;
+  }
+
+  .intro-sentence {
+    font-size: 1rem;
+  }
+
+  .intro-btn-margin {
+    margin-bottom: 1rem;
+  }
+
+  .ms-5 {
+    padding-left: 1rem !important;
+  }
+}
+
+
+
+
 .button2 {
   border: 1px solid #ffffff;
   /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
@@ -1462,7 +1502,7 @@ h4 {
   font-weight: 700;
   font-size: 18px;
   line-height: 24.3px;
-  text-align: center;
+  text-align: left !important;
   padding-inline-start: 2rem;
   text-transform: uppercase;
   color: #040f24;
@@ -1485,9 +1525,13 @@ h4 {
   height: 80vh;
 }
 
-@media (max-width: 800px) and (min-height: 400px) {
+@media only screen and (min-width: 350px) and (max-width: 464px) {
   .showcase {
-    height: 30vh !important;
+    /* background-color: #2f2f2f; */
+    background-image: url("../src/img/ReworkBG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: auto;
   }
 }
 
@@ -1506,7 +1550,7 @@ h4 {
   height: 315px;
   background-color: #000000;
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .yt-vid {
     width: 100%;
     height: auto;
@@ -1574,7 +1618,7 @@ h4 {
   .container-content {
     flex-direction: row;
   }
-}
+} */
 .content-eco1-bg {
   background-color: #fff;
   padding: 24px 159px;
@@ -1602,7 +1646,7 @@ h4 {
 .content-info {
   display: flex;
 }
-@media (max-width: 310px) {
+/* @media (max-width: 310px) {
   .content-info {
     display: flex;
     flex-wrap: wrap;
@@ -1682,7 +1726,7 @@ h4 {
     margin-top: 1rem;
     margin-left: 1rem;
   }
-}
+} */
 .box-animation-1 {
   position: absolute;
   float: left;
@@ -1726,7 +1770,7 @@ h4 {
     transform: rotate(360deg);
   }
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .box-animation-1 {
     width: 5.5em;
     height: 6.5em;
@@ -1827,7 +1871,7 @@ h4 {
     margin-top: 130px;
     margin-left: 290px;
   }
-}
+} */
 .right-box-animation-1 {
   position: absolute;
   float: right;
@@ -1872,7 +1916,7 @@ h4 {
     transform: rotate(360deg);
   }
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .right-box-animation-1 {
     width: 5.5em;
     height: 6.5em;
@@ -1950,7 +1994,7 @@ h4 {
     height: 105.69px;
     right: 20%;
   }
-}
+} */
 .left-box-2nd {
   position: absolute;
   float: left;
@@ -2008,7 +2052,7 @@ h4 {
   margin-left: 10rem;
 }
 
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .left-box-2nd {
     width: 159.14px;
     height: 173.72px;
@@ -2104,7 +2148,7 @@ h4 {
     width: 99.9px;
     height: 105.69px;
   }
-}
+} */
 .row-icons {
   margin-top: 8rem !important;
 }
@@ -2112,13 +2156,13 @@ h4 {
   margin-bottom: 5rem !important;
 }
 .blog-link {
-  color: #5a5a5a;
-  font-weight: normal;
+  color: #3f3f3f;
+  font-weight: bold;
 }
 
-.blog-link:hover {
+/* .blog-link:hover {
   color: #5a5a5a;
-}
+} */
 .q-tokenomics-showcase-intro-lead {
   font-style: normal;
   font-weight: normal;
@@ -2295,7 +2339,7 @@ h4 {
   left: 46%;
   cursor: pointer;
 }
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .dropdown-list {
     position: relative !important;
     left: 0 !important;
@@ -2306,11 +2350,21 @@ h4 {
     position: absolute !important;
     left: 46% !important;
   }
-}
+} */
 .ai-title-home {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3rem;
+}
+
+.getting-started-cont {
+  margin: 0 5rem;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .getting-started-cont {
+    margin: 0 1rem;
+  }
 }
 
 .getting-start-title {
@@ -2530,7 +2584,7 @@ h4 {
   background-color: #000;
 }
 
-@media (min-width: 310px) {
+/* @media (min-width: 310px) {
   .footerResponsive {
     display: grid;
   }
@@ -2546,7 +2600,7 @@ h4 {
   .footerWeb {
     display: grid;
   }
-}
+} */
 .a-no-design {
   color: #ffffff;
   text-decoration: none;
@@ -2574,6 +2628,13 @@ h4 {
   width: 100%;
 }
 
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .bg-raffle {
+    height: auto;
+  }
+}
+
+
 .sub-raff {
   padding-left: 23rem;
   margin-top: 4rem;
@@ -2589,12 +2650,36 @@ h4 {
   column-gap: 10%;
   margin-top: 8%;
 }
-@media (max-width: 800px) and (min-height: 400px) {
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+
   .raffle-sec-res {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 0 !important;
   }
+  .raffle-sec {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  
+}
+
+.raffle-img-main-mobile {
+  display: none;
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .raffle-img-main {
+    display: none;
+  }
+  
+  .raffle-img-main-mobile {
+    display: block;
+  }
+
+  .raffle-img-main-mobile img {
+    width: 100%;
+  }
+  
 }
 
 .raffle-sec-claim {
@@ -2617,12 +2702,16 @@ h4 {
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
+  margin: 0 20%;
+  text-align: left;
 }
 
 .raffle-sub-title-3 {
   font-family: "Rajdhani";
   font-style: normal;
   font-size: 1.125rem;
+  margin: 0 20%;
+  text-align: left;
 }
 
 .raffle-sub-title-4 {
@@ -2630,26 +2719,82 @@ h4 {
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
+  margin: 0 20%;
+  text-align: left;
 }
 
 .sub-text-raff-1 {
   padding: 0;
+  margin: 0 20%;
+  text-align: left;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .raffle-sub-title {
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: left;
+    margin: 0 5%;
+  }
+
+  .raffle-sub-title-2 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.52rem;
+    text-align: left;
+    margin: 0 5%;
+  }
+  
+  .raffle-sub-title-3 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-size: 1.125rem;
+    margin: 0 5%;
+  }
+  
+  .raffle-sub-title-4 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin: 0 5%;
+  }
+  
+  .sub-text-raff-1 {
+    padding: 0;
+    margin: 0 5%;
+  }
+
+  .secure-entry-btn {
+    width: 80%;
+    margin:auto;
+    margin-bottom: 3rem;
+    text-align: center !important;
+  }
 }
 
 .bg-nft-collection {
   background-color: #1c2433;
-  height: 100vh;
+  height: 90vh;
+  max-height: auto;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: row;
 }
 
 .nft-raffle-sec-2 {
   margin-top: 5%;
+  font-size: 2rem;
 }
 
 .nft-collection-sec {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .nft-subtext-1 {
@@ -2658,6 +2803,7 @@ h4 {
   font-weight: 700;
   font-size: 3.5rem;
 }
+
 .nft-subtext-2 {
   font-family: "Rajdhani";
   font-style: normal;
@@ -2670,13 +2816,17 @@ h4 {
   justify-content: center;
   /* align-content: center; */
   flex-direction: row;
-  gap: 3.7rem;
+  gap: 4rem;
+  margin-bottom: 1.5rem;
 }
+
 .collection-sub-text-1 {
   font-family: "Rajdhani";
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
+  color: white;
+  text-align: left !important;
 }
 
 .collection-sec-2 {
@@ -2692,7 +2842,70 @@ h4 {
   font-family: "Rajdhani";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
+  color: white;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .bg-nft-collection {
+    height: auto;
+  }
+
+  .nft-collection-sec {
+    margin-bottom: 1rem;
+  }
+
+  .nft-raffle-sec-2 {
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .nft-subtext-1 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .nft-subtext-2 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    text-transform: none !important;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .collection-sec {
+    display: block;
+  }
+
+  .collection-sub-text-1 {
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .collection-sub-text-1 img {
+    margin: 0 !important;
+    margin-right: 1rem !important;
+  }
+
+  .collection-item-cont {
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .list-collection {
+    padding-left: 1rem !important;
+  }
+  
+  .view-collection-btn {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center !important;
+  }
 }
 
 .bg-collection-2 {
@@ -2702,6 +2915,102 @@ h4 {
 .bg-raffle-2 {
   background-color: #161920;
   height: 100vh;
+}
+
+.bg-daoprojects {
+  background-color: #0a0909;
+  height: 100vh;
+  width: 100%;
+}
+
+.raff-sub-text {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.raffle-sec-dao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.dao-subtext-1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.dao-subtext-2 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .bg-daoprojects {
+    background-color: #0a0909;
+    height: 45vh;
+    width: 100%;
+  }
+
+  .dao-subtext-1 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .dao-subtext-2 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.bg-propertyFL {
+  background-color: #161920;
+  height: 100vh;
+}
+
+.propertyFL-subtext-1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.propertyFL-subtext-2 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .bg-propertyFL {
+    background-color: #161920;
+    height: 45vh;
+    width: 100%;
+  }
+
+  .propertyFL-subtext-1 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .propertyFL-subtext-2 {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+  }
 }
 
 .community-collection-title {
@@ -2772,17 +3081,4 @@ h4 {
   height: 100vh;
 }
 
-.raff-sub-text {
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  text-transform: uppercase;
-}
 
-.raffle-sec-dao {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20%;
-}
