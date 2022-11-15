@@ -20,7 +20,7 @@ class ClaimQubesAWS extends Component {
   };
   changeUrl = (event) => {
     const { value } = event.target;
-    const isTrueVal = !value || this.urlPatternValidation(value);
+    const isTrueVal = value || this.urlPatternValidation(value);
     this.setState({
       URL: value,
       isTrueVal,
@@ -87,11 +87,11 @@ class ClaimQubesAWS extends Component {
           <div className="container">
             <div className="d-sm-flex">
               <div>
-                <h1 className="claimqubes-text pt-5">
-                  CLAIM YOUR QUBE TOKENS HERE
+                <h1 className="claimqubes-text text-start pt-5 ms-2">
+                  CLAIM YOUR <br />QUBE TOKENS HERE
                 </h1>
-                <p className="ms-2 mt-5 claimqubes-subtext">
-                  Your QUBE can be claimed within 2 days upon sending the token
+                <p className="ms-2 mt-5 lh-base claimqubes-subtext">
+                  Your QUBE can be claimed within 2 days upon <br/>sending the token
                   address.
                 </p>
                 <form id="form-contact">
@@ -99,13 +99,13 @@ class ClaimQubesAWS extends Component {
                     <label className="form-label pt-5 ms-2" for="form3Example3">
                       <span className="details">
                         Input Solana Explorer address below:&nbsp;
-                        <span
+                        {/* <span
                           style={{
                             color: "red",
                           }}
                         >
                           *
-                        </span>
+                        </span> */}
                       </span>
                     </label>
                     <input
@@ -117,7 +117,7 @@ class ClaimQubesAWS extends Component {
                       className="form-control ms-1"
                       placeholder="Enter a Valid Address"
                     />
-                    {!this.state.isTrueVal ? (
+                    {this.state.isTrueVal ? (
                       <div
                         className="ms-2"
                         id="errorMsg"
@@ -165,8 +165,9 @@ class ClaimQubesAWS extends Component {
             </div>
           </div>
         </section>
-        <section className="pt-5 text-sm-start text-light bg-raffle-sec">
-          <h1 className="raff-sub-text text-center">
+        <section className="text-sm-start text-light bg-raffle-sec h-100 pb-5">
+        <div className="container p-5 pb-5"> 
+          <h1 className="raff-sub-text text-center p-5">
             Prize awaits when you buy our nfts!
           </h1>
           <div className="raffle-sec-claim">
@@ -175,7 +176,7 @@ class ClaimQubesAWS extends Component {
             </div>
             <div className="raffle-des-main">
               <h1 className="text-uppercase raffle-sub-title pt-3">
-                Homeqube Raffle Draw
+                Homeqube Raffle Draw!
               </h1>
               <h3 className="raffle-sub-title-2 text-uppercase text-light">
                 Lucky winner of A condominium from <br /> calma properties inc
@@ -248,6 +249,7 @@ class ClaimQubesAWS extends Component {
               </div>
             </div>
           </div> */}
+          </div>
         </section>
         {/* <section className="text-center margin-top-10">
           <div class="card mx-4 mx-md-5 shadow-5-strong claim-qubes-box">
