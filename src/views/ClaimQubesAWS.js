@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import * as emailjs from "emailjs-com";
 import TweetEmbed from "react-tweet-embed";
 import ClaimQubesButton from "../components/ClaimQubesModal/ClaimQubesButton";
 import raffleImg from "../img/Pablo_Residence_2.png";
 import raffleImg2 from "../img/ReworkRaf.png";
 import ClaimQubesImg from "../img/ClaimQubes.png";
+import Navigation from "../components/NavBar/Navigation";
 
 class ClaimQubesAWS extends Component {
   state = {
@@ -20,7 +22,7 @@ class ClaimQubesAWS extends Component {
   };
   changeUrl = (event) => {
     const { value } = event.target;
-    const isTrueVal = value || this.urlPatternValidation(value);
+    const isTrueVal = this.urlPatternValidation(value) || value;
     this.setState({
       URL: value,
       isTrueVal,
@@ -53,38 +55,43 @@ class ClaimQubesAWS extends Component {
 
   render() {
     const { isTrueVal, URL } = this.state;
-
+    
+    const handleClick = (e) => {
+      
+    }
     const handleSubmit = (e) => {
+      
       e.preventDefault();
-
-      fetch(
-        "https://b2tsd7c1zl.execute-api.ap-southeast-1.amazonaws.com/claimqubes",
-        {
-          mode: "no-cors",
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            senderName: "claim.qubes@gmail.com",
-            senderEmail: "about@homeqube.com",
-            message: URL,
-            date: new Date(),
-          }),
-        }
-      ).then(() => {
-        this.setState({
-          URL: "",
+      if (!isTrueVal){
+        fetch(
+          "https://b2tsd7c1zl.execute-api.ap-southeast-1.amazonaws.com/claimqubes",
+          {
+            mode: "no-cors",
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              senderName: "claim.qubes@gmail.com",
+              senderEmail: "about@homeqube.com",
+              message: URL,
+              date: new Date(),
+            }),
+          }
+        ).then(() => {
+          this.setState({
+            URL: "",
+          });
+          alert("  explorer solana com address has been send.");
         });
-        alert("  explorer solana com address has been send.");
-      });
-    };
+      };
+      }    
 
     return (
       <>
         <section className="p-5">
-          <div className="container">
+          <div className="container mb-5">
             <div className="d-sm-flex">
               <div>
                 <h1 className="claimqubes-text text-start pt-5 ms-2">
@@ -99,13 +106,6 @@ class ClaimQubesAWS extends Component {
                     <label className="form-label pt-5 ms-2" for="form3Example3">
                       <span className="details">
                         Input Solana Explorer address below:&nbsp;
-                        {/* <span
-                          style={{
-                            color: "red",
-                          }}
-                        >
-                          *
-                        </span> */}
                       </span>
                     </label>
                     <input
@@ -165,12 +165,12 @@ class ClaimQubesAWS extends Component {
             </div>
           </div>
         </section>
-        <section className="text-sm-start text-light bg-raffle-sec h-100 pb-5">
-        <div className="container p-5 pb-5"> 
+        <section className="text-sm-start text-light bg-raffle-sec h-100 pb-5 ">
+        <div className="container p-5 pb-5 mb-5 m-auto"> 
           <h1 className="raff-sub-text text-center p-5">
             Prize awaits when you buy our nfts!
           </h1>
-          <div className="raffle-sec-claim">
+          <div className="raffle-sec-claim text-start">
             <div className="raffle-img-main">
               <img src={raffleImg2} alt="" />
             </div>
@@ -178,22 +178,23 @@ class ClaimQubesAWS extends Component {
               <h1 className="text-uppercase raffle-sub-title pt-3">
                 Homeqube Raffle Draw!
               </h1>
-              <h3 className="raffle-sub-title-2 text-uppercase text-light">
+              <h3 className="raffle-sub-title-2 text-uppercase text-light m-0">
                 Lucky winner of A condominium from <br /> calma properties inc
               </h3>
-              <p className="raffle-sub-title-3 text-light pt-5">
+              <p className="raffle-sub-title-3 text-light pt-5 text-start m-0">
                 For the first 1000 NFTs sold, we will give away one brand new
                 condo in <br />
                 Paranaque, Philippines.
               </p>
-              <h4 className="raffle-sub-title-4 pt-5">
+              <h4 className="raffle-sub-title-4 pt-5 text-start m-0">
                 Get your system architecture NFT (9$Sol)
               </h4>
-              <p className="text-light sub-text-raff-1">
+              <p className="text-light sub-text-raff-1 m-0 mb-3">
                 Transfer fees are included
               </p>
               <div className="pt-3">
-                <button
+                <Link to={'/home-products'}>
+                <button 
                   className="button1 btn btn-lg rounded-pill"
                   type="button"
                 >
@@ -204,6 +205,7 @@ class ClaimQubesAWS extends Component {
                     alt="image"
                   />
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -251,73 +253,7 @@ class ClaimQubesAWS extends Component {
           </div> */}
           </div>
         </section>
-        {/* <section className="text-center margin-top-10">
-          <div class="card mx-4 mx-md-5 shadow-5-strong claim-qubes-box">
-            <div className="card-body py-5 px-md-5">
-              <div className="row d-flex justify-content-center">
-                <div className="col-lg-8">
-                  <h2 className="fw-bold">CLAIM YOUR QUBES HERE</h2>
-                  <label className="form-label mb-5">
-                    UPON SENDING THE TOKEN ADDRESS, YOU WILL BE ABLE TO CLAIM
-                    YOUR QUBE WITHIN 2 DAYSS.
-                  </label>
-
-                  <form id="form-contact">
-                    <div className="form-outline mb-4">
-                      <label className="form-label" for="form3Example3">
-                        <span className="details text-uppercase">
-                          explorer solana com address&nbsp;
-                          <span
-                            style={{
-                              color: "red",
-                            }}
-                          >
-                            *
-                          </span>
-                        </span>
-                      </label>
-                      <input
-                        required
-                        type="text"
-                        name="URL"
-                        value={URL}
-                        onChange={this.changeUrl}
-                        className="form-control"
-                      />
-                      {!this.state.isTrueVal ? (
-                        <div
-                          id="errorMsg"
-                          style={{
-                            color: "red",
-                          }}
-                        >
-                          Enter Valid explorer.solana.com address
-                        </div>
-                      ) : (
-                        <div
-                          id="errorMsg"
-                          style={{
-                            display: "none",
-                          }}
-                        ></div>
-                      )}
-                    </div>
-                    <button
-                      className="contact-send-button btn btn-lg rounded-pill"
-                      id="sendbtn"
-                      type="button"
-                      onClick={handleSubmit}
-                      disabled={!isTrueVal}
-                    >
-                      submit
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
+        
         {/* <section className="showcase1 text-dark p-2 text-center text-sm-start">
           <div className="if-container container-fluid">
             <section className="mt-5 text-center">
