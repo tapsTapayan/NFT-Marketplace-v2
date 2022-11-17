@@ -1514,7 +1514,6 @@ h4 {
   /* background-color: #2f2f2f; */
   overflow-x: hidden;
   position: relative;
-  z-index: -1;
   background: #0A0909;
   height: 80vh;
 }
