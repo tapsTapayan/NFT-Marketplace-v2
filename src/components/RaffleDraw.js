@@ -9,8 +9,8 @@ function RaffleDraw() {
   const [modalOpen, setOpenModal] = useState(false);
   return (
     <>
-      <section className="raffle-sec-res pt-5 text-light">
-        <div className="raffle-sec">
+      <section className="raffle-sec-res text-light">
+        <div className="raffle-sec m-auto">
           <div className="raffle-img-main">
             <img src={raffleImg2} alt="" />
           </div>
@@ -36,10 +36,12 @@ function RaffleDraw() {
               Transfer fees are included
             </p>
             <div className="pt-3">
-              <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
-                Secure your entry
-                <img src="/icons8-right-24.png" className="ms-1" alt="image" />
-              </button>
+              <Link to={'/home-products'}>
+                <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
+                  Secure your entry
+                  <img src="/icons8-right-24.png" className="ms-1" alt="image" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
