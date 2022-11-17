@@ -4,6 +4,7 @@ import raffleImg from "../img/Pablo_Residence_2.png";
 import raffleImg2 from "../img/ReworkRaf.png";
 import raffleImgmobile from "../img/Pablo_Residence_2.png";
 import Modal from "./RaffleModal/Modal";
+import { NavLink } from "react-router-dom";
 
 function RaffleDraw() {
   const [modalOpen, setOpenModal] = useState(false);
@@ -35,11 +36,13 @@ function RaffleDraw() {
             <p className="text-light sub-text-raff-1 mb-4">
               Transfer fees are included
             </p>
-            <div className="pt-3">
-              <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
-                Secure your entry
-                <img src="/icons8-right-24.png" className="ms-1" alt="image" />
-              </button>
+            <div className="pt-3 button-raffle-cont">
+                <NavLink to="/home-designs" className="a-link">
+                  <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
+                    Secure your entry
+                    <img src="/icons8-right-24.png" className="ms-1" alt="image" />
+                  </button>
+                </NavLink>
             </div>
           </div>
         </div>

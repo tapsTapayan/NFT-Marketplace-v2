@@ -2647,9 +2647,11 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 10%;
+  column-gap: 5%;
   margin-top: 8%;
 }
+
+
 @media only screen and (min-width: 350px) and (max-width: 464px) {
 
   .raffle-sec-res {
@@ -2660,6 +2662,13 @@ h4 {
     margin-top: 0;
   }
   
+}
+
+.raffle-img-main {
+  width: 25%;
+}
+.raffle-img-main img {
+  width: 100%;
 }
 
 .raffle-img-main-mobile {
@@ -2681,6 +2690,9 @@ h4 {
   }
   
 }
+.raffle-des-main {
+  width: 32rem;
+}
 
 .raffle-sec-claim {
   display: flex;
@@ -2695,6 +2707,7 @@ h4 {
   font-style: normal;
   font-weight: 700;
   font-size: 3rem;
+  text-align: left;
 }
 
 .raffle-sub-title-2 {
@@ -2702,7 +2715,6 @@ h4 {
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
-  margin: 0 20%;
   text-align: left;
 }
 
@@ -2710,7 +2722,6 @@ h4 {
   font-family: "Rajdhani";
   font-style: normal;
   font-size: 1.125rem;
-  margin: 0 20%;
   text-align: left;
 }
 
@@ -2719,17 +2730,23 @@ h4 {
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
-  margin: 0 20%;
   text-align: left;
 }
 
 .sub-text-raff-1 {
   padding: 0;
-  margin: 0 20%;
+  text-align: left;
+}
+
+.button-raffle-cont {
   text-align: left;
 }
 
 @media only screen and (min-width: 350px) and (max-width: 464px) {
+  .raffle-des-main {
+    width: auto;
+  }
+
   .raffle-sub-title {
     font-weight: 700;
     font-size: 1.7rem;
@@ -2765,7 +2782,9 @@ h4 {
     padding: 0;
     margin: 0 5%;
   }
-
+  .button-raffle-cont {
+    text-align: center !important;
+  }
   .secure-entry-btn {
     width: 80%;
     margin:auto;
@@ -3087,4 +3106,29 @@ h4 {
   height: 100vh;
 }
 
+.raff-sub-text-mobile {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  display: none;
+  padding: 0 .4rem;
+  padding-top: 1rem;
+}
+@media only screen and (min-width: 350px) and (max-width: 464px) {
+  .bg-raffle-sec {
+    height: auto;
+    padding-top: 0 !important;
+  }
+
+  .bg-raffle-sec .raff-sub-text{
+    display: none;
+  }
+
+  .bg-raffle-sec .raff-sub-text-mobile{
+    display: block;
+    font-size: 2.1rem;
+  }
+}
 
