@@ -259,10 +259,10 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
 
 const NavbarContainer = styled.div`
   display: flex;
-
   flex-direction: row;
   background-color: #0a0909;
   backdrop-filter: blur(5px);
+  z-index: 999;
 `;
 
 const LeftContainer = styled.div`

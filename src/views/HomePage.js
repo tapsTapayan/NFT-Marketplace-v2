@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 // import Player from "react-video-js-player";
 import Homeqube from "../video/Homeqube-ICO.mp4";
 import HomequbeOGG from "../video/Homeqube-ICO.ogg";
+import cubesLeft from "../img/cubes-backdrop-left.svg";
+import cubesRight from "../img/cube-backdrop-right.svg";
 import Accordion from "./Accordion";
 import Cards from "./Cards";
 import NftNavLinks from "../components/NavBar/NftNavLinks";
@@ -172,9 +174,15 @@ function HomePage() {
   ];
   return (
     <>
-      <section className="showcase text-light p-5 text-center">
-        <div className="container-bg container">
-          <div className="d-sm align-content-center container-content">
+      <section className="showcase text-light text-center">
+        <div className="cubes-backdrop-left">
+          <img src={cubesLeft} className="cubes-backdrop-icon" alt="" />
+        </div>
+        <div className="cubes-backdrop-right">
+          <img src={cubesRight} className="cubes-backdrop-icon" alt="" />
+        </div>
+        <div className="container p-5">
+          <div className="d-sm container-content flex-align-center">
             <div>
               <h1 className="intro">
                 Deconstructing Systems.
