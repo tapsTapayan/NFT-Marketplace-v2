@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import * as emailjs from "emailjs-com";
-import TweetEmbed from "react-tweet-embed";
-import ClaimQubesButton from "../components/ClaimQubesModal/ClaimQubesButton";
-import raffleImg from "../img/Pablo_Residence_2.png";
-import raffleImg2 from "../img/ReworkRaf.png";
-import raffleImgmobile from "../img/Pablo_Residence_2.png";
-import ClaimQubesImg from "../img/ClaimQubes.png";
-import { NavLink } from "react-router-dom";
-import Navigation from "../components/NavBar/Navigation";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import * as emailjs from 'emailjs-com';
+import TweetEmbed from 'react-tweet-embed';
+import ClaimQubesButton from '../components/ClaimQubesModal/ClaimQubesButton';
+import raffleImg from '../img/Pablo_Residence_2.png';
+import raffleImg2 from '../img/ReworkRaf.png';
+import raffleImgmobile from '../img/Pablo_Residence_2.png';
+import ClaimQubesImg from '../img/ClaimQubes.png';
+import { NavLink } from 'react-router-dom';
+import Navigation from '../components/NavBar/Navigation';
 
 class ClaimQubesAWS extends Component {
   state = {
-    URL: "",
+    URL: '',
     isTrueVal: false,
-    email: "",
-    subject: "",
+    email: '',
+    subject: '',
   };
   urlPatternValidation = (URL) => {
-    const SOLSCAN = "explorer.solana.com/address/";
-    const regex = new RegExp("(https?://)?" + SOLSCAN + "[/\\w .-]*/?");
+    const SOLSCAN = 'explorer.solana.com/address/';
+    const regex = new RegExp('(https?://)?' + SOLSCAN + '[/\\w .-]*/?');
     return regex.test(URL);
   };
   changeUrl = (event) => {
@@ -57,83 +57,84 @@ class ClaimQubesAWS extends Component {
 
   render() {
     const { isTrueVal, URL } = this.state;
-    
-    const handleClick = (e) => {
-      
-    }
+
+    const handleClick = (e) => {};
     const handleSubmit = (e) => {
-      
       e.preventDefault();
-      if (!isTrueVal){
+      if (!isTrueVal) {
         fetch(
-          "https://b2tsd7c1zl.execute-api.ap-southeast-1.amazonaws.com/claimqubes",
+          'https://b2tsd7c1zl.execute-api.ap-southeast-1.amazonaws.com/claimqubes',
           {
-            mode: "no-cors",
-            method: "POST",
+            mode: 'no-cors',
+            method: 'POST',
             headers: {
-              Accept: "application/json",
-              "Content-type": "application/json",
+              Accept: 'application/json',
+              'Content-type': 'application/json',
             },
             body: JSON.stringify({
-              senderName: "claim.qubes@gmail.com",
-              senderEmail: "about@homeqube.com",
+              senderName: 'claim.qubes@gmail.com',
+              senderEmail: 'about@homeqube.com',
               message: URL,
               date: new Date(),
             }),
-          }
+          },
         ).then(() => {
           this.setState({
-            URL: "",
+            URL: '',
           });
-          alert("  explorer solana com address has been send.");
+          alert('  explorer solana com address has been send.');
         });
-      };
-      }    
+      }
+    };
 
     return (
       <>
-        <section className="p-5">
-          <div className="container mb-5">
-            <div className="d-sm-flex">
+        <section className='p-5'>
+          <div className='container mb-5'>
+            <div className='d-sm-flex'>
               <div>
-                <h1 className="claimqubes-text text-start pt-5 ms-2">
-                  CLAIM YOUR <br />QUBE TOKENS HERE
+                <h1 className='claimqubes-text text-start pt-5 ms-2'>
+                  CLAIM YOUR <br />
+                  QUBE TOKENS HERE
                 </h1>
-                <p className="ms-2 mt-5 lh-base claimqubes-subtext">
-                  Your QUBE can be claimed within 2 days upon <br/>sending the token
-                  address.
+                <p className='ms-2 mt-5 lh-base claimqubes-subtext'>
+                  Your QUBE can be claimed within 2 days upon <br />
+                  sending the token address.
                 </p>
-                <form id="form-contact">
-                  <div className="form-outline mb-4">
-                    <label className="form-label pt-5 ms-2" for="form3Example3">
-                      <span className="details">
+                <form id='form-contact'>
+                  <div className='form-outline mb-4'>
+                    <label
+                      className='form-label pt-5 ms-2'
+                      for='form3Example3'
+                    >
+                      <span className='details'>
                         Input Solana Explorer address below:&nbsp;
                       </span>
                     </label>
                     <input
                       required
-                      type="text"
-                      name="URL"
+                      type='text'
+                      name='URL'
                       value={URL}
                       onChange={this.changeUrl}
-                      className="form-control ms-1"
-                      placeholder="Enter a Valid Address"
+                      className='form-control ms-1'
+                      placeholder='Enter a Valid Address'
                     />
                     {this.state.isTrueVal ? (
                       <div
-                        className="ms-2"
-                        id="errorMsg"
+                        className='ms-2'
+                        id='errorMsg'
                         style={{
-                          color: "red",
+                          color: 'red',
                         }}
                       >
                         Enter Valid explorer.solana.com address
                       </div>
                     ) : (
                       <div
-                        id="errorMsg"
+                        id='errorMsg'
                         style={{
-                          display: "none",
+                          display: 'none',
                         }}
                       ></div>
                     )}
@@ -148,63 +149,81 @@ class ClaimQubesAWS extends Component {
                     submit
                   </button> */}
                   <button
-                    className="button1 btn btn-lg rounded-pill"
-                    type="button"
-                    id="sendbtn"
+                    className='button1 btn btn-lg rounded-pill'
+                    type='button'
+                    id='sendbtn'
                     onClick={handleSubmit}
                     disabled={!isTrueVal}
                   >
                     Submit
                     <img
-                      src="/icons8-right-24.png"
-                      className="p-1"
-                      alt="image"
+                      src='/icons8-right-24.png'
+                      className='p-1'
+                      alt='image'
                     />
                   </button>
                 </form>
               </div>
-              <img className="img-fluid ms-auto" src={ClaimQubesImg} alt="" />
+              <img
+                className='img-fluid ms-auto'
+                src={ClaimQubesImg}
+                alt=''
+              />
             </div>
           </div>
         </section>
-        <section className="pt-5 text-sm-start text-light bg-raffle-sec">
-          <h1 className="raff-sub-text text-center ">
+        <section className='pt-5 text-sm-start text-light bg-raffle-sec'>
+          <h1 className='raff-sub-text text-center '>
             Prize awaits when you buy our nfts!
           </h1>
-          <div className="raffle-sec">
-
-            <div className="raffle-img-main">
-              <img src={raffleImg2} alt="" />
+          <div className='raffle-sec'>
+            <div className='raffle-img-main'>
+              <img
+                src={raffleImg2}
+                alt=''
+              />
             </div>
-            <div className="raffle-img-main-mobile">
-              <img src={raffleImgmobile} alt="" />
+            <div className='raffle-img-main-mobile'>
+              <img
+                src={raffleImgmobile}
+                alt=''
+              />
             </div>
-            <h1 className="raff-sub-text-mobile text-center ">
+            <h1 className='raff-sub-text-mobile text-center '>
               Prize awaits when you buy our nfts!
             </h1>
-            <div className="raffle-des-main">
-              <h1 className="text-uppercase raffle-sub-title pt-3">
+            <div className='raffle-des-main'>
+              <h1 className='text-uppercase raffle-sub-title pt-3'>
                 Homeqube Raffle Draw!
               </h1>
-              <h3 className="raffle-sub-title-2 text-uppercase text-light">
+              <h3 className='raffle-sub-title-2 text-uppercase text-light'>
                 Lucky winner of A condominium from calma properties inc
               </h3>
-              <p className="raffle-sub-title-3 text-light pt-5 text-start m-0">
+              <p className='raffle-sub-title-3 text-light pt-5 text-start m-0'>
                 For the first 1000 NFTs sold, we will give away one brand new
-                condo in
-                Paranaque, Philippines.
+                condo in Paranaque, Philippines.
               </p>
-              <h4 className="raffle-sub-title-4 pt-5 text-start m-0">
+              <h4 className='raffle-sub-title-4 pt-5 text-start m-0'>
                 Get your system architecture NFT (9$Sol)
               </h4>
-              <p className="text-light sub-text-raff-1 mb-4">
+              <p className='text-light sub-text-raff-1 mb-4'>
                 Transfer fees are included
               </p>
-              <div className="pt-3">
-                <NavLink to="/home-designs" className="a-link">
-                  <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
+              <div className='pt-3'>
+                <NavLink
+                  to='/home-designs'
+                  className='a-link'
+                >
+                  <button
+                    className='button1 btn btn-lg rounded-pill secure-entry-btn'
+                    type='button'
+                  >
                     Secure your entry
-                    <img src="/icons8-right-24.png" className="ms-1" alt="image" />
+                    <img
+                      src='/icons8-right-24.png'
+                      className='ms-1'
+                      alt='image'
+                    />
                   </button>
                 </NavLink>
               </div>
@@ -252,9 +271,9 @@ class ClaimQubesAWS extends Component {
               </div>
             </div>
           </div> */}
-          </div>
+          {/* </div> */}
         </section>
-        
+
         {/* <section className="showcase1 text-dark p-2 text-center text-sm-start">
           <div className="if-container container-fluid">
             <section className="mt-5 text-center">
@@ -371,3 +390,4 @@ class ClaimQubesAWS extends Component {
   }
 }
 export default ClaimQubesAWS;
+
