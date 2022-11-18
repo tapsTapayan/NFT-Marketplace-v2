@@ -5,7 +5,9 @@ import TweetEmbed from "react-tweet-embed";
 import ClaimQubesButton from "../components/ClaimQubesModal/ClaimQubesButton";
 import raffleImg from "../img/Pablo_Residence_2.png";
 import raffleImg2 from "../img/ReworkRaf.png";
+import raffleImgmobile from "../img/Pablo_Residence_2.png";
 import ClaimQubesImg from "../img/ClaimQubes.png";
+import { NavLink } from "react-router-dom";
 import Navigation from "../components/NavBar/Navigation";
 
 class ClaimQubesAWS extends Component {
@@ -165,47 +167,46 @@ class ClaimQubesAWS extends Component {
             </div>
           </div>
         </section>
-        <section className="text-sm-start text-light bg-raffle-sec h-100 pb-5 ">
-        <div className="container p-5 pb-5 mb-5 m-auto"> 
-          <h1 className="raff-sub-text text-center p-5">
+        <section className="pt-5 text-sm-start text-light bg-raffle-sec">
+          <h1 className="raff-sub-text text-center ">
             Prize awaits when you buy our nfts!
           </h1>
-          <div className="raffle-sec-claim text-start">
+          <div className="raffle-sec">
+
             <div className="raffle-img-main">
               <img src={raffleImg2} alt="" />
             </div>
+            <div className="raffle-img-main-mobile">
+              <img src={raffleImgmobile} alt="" />
+            </div>
+            <h1 className="raff-sub-text-mobile text-center ">
+              Prize awaits when you buy our nfts!
+            </h1>
             <div className="raffle-des-main">
               <h1 className="text-uppercase raffle-sub-title pt-3">
                 Homeqube Raffle Draw!
               </h1>
-              <h3 className="raffle-sub-title-2 text-uppercase text-light m-0">
-                Lucky winner of A condominium from <br /> calma properties inc
+              <h3 className="raffle-sub-title-2 text-uppercase text-light">
+                Lucky winner of A condominium from calma properties inc
               </h3>
               <p className="raffle-sub-title-3 text-light pt-5 text-start m-0">
                 For the first 1000 NFTs sold, we will give away one brand new
-                condo in <br />
+                condo in
                 Paranaque, Philippines.
               </p>
               <h4 className="raffle-sub-title-4 pt-5 text-start m-0">
                 Get your system architecture NFT (9$Sol)
               </h4>
-              <p className="text-light sub-text-raff-1 m-0 mb-3">
+              <p className="text-light sub-text-raff-1 mb-4">
                 Transfer fees are included
               </p>
               <div className="pt-3">
-                <Link to={'/home-products'}>
-                <button 
-                  className="button1 btn btn-lg rounded-pill"
-                  type="button"
-                >
-                  Secure your entry
-                  <img
-                    src="/icons8-right-24.png"
-                    className="ms-1"
-                    alt="image"
-                  />
-                </button>
-                </Link>
+                <NavLink to="/home-designs" className="a-link">
+                  <button className="button1 btn btn-lg rounded-pill secure-entry-btn" type="button">
+                    Secure your entry
+                    <img src="/icons8-right-24.png" className="ms-1" alt="image" />
+                  </button>
+                </NavLink>
               </div>
             </div>
           </div>

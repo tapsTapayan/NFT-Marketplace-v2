@@ -9,97 +9,235 @@ import discord from "../../img/newDiscord.svg";
 function FooterWeb() {
   return (
     <>
-      <div className="footerWeb">
+      <div className="">
         <div className="d-flex flex-column">
-          <div>
-            <img src={homequbelogo} alt="" />
+          <div className="footer-headings-cont">
+            <div className="d-flex align-items-center">
+              <img src={homequbelogo} alt="" />
+              <span className="text-light io-text-logo align-self-center">.IO</span>
+            </div>
+            <span className="text-uppercase text-tag-line-footer align-self-center">Number 1 NFT store comparison is opensea</span>
           </div>
           <div class="container mt-5">
-            <div class="row align-items-start mb-3">
-              <div class="col-2 new-footer-headline text-uppercase">
-                Learn More
-              </div>
-              {/* <div class="col-2 new-footer-headline text-uppercase">
-                Company
-              </div> */}
-              <div class="col-2 new-footer-headline text-uppercase">
-                Our Products
-              </div>
-              {/* <div class="col-2 new-footer-headline text-uppercase">
-                Resources
-              </div> */}
-              <div class="col-2 new-footer-headline text-uppercase">Legal</div>
-              {/* <div class="col-2 new-footer-headline-2 text-uppercase">
-                Connect with us
-              </div> */}
-              <div class="col-2">
-                <div className="d-flex pb-1">
+            <div class="align-items-start mb-3 footer-content-container">
+              <div className="footer-item-cont">
+                <div class=" new-footer-headline text-uppercase mb-2">
+                  Learn More
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
                   <a
-                    href="https://www.instagram.com/homeqube.ai/"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    href="https://www.qube.homeqube.com/stakeholders"
                     className="a-no-design"
                   >
-                    <img
-                      src={instagram}
-                      alt=""
-                      className="new-footer-icons me-3"
-                    />
+                    StakeHolders
                   </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
                   <a
-                    href="https://twitter.com/homeqube_ai"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    href="https://www.qube.homeqube.com/qube-tokenomics"
                     className="a-no-design"
                   >
-                    <img
-                      src={twitter}
-                      alt=""
-                      className="new-footer-icons me-3"
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/homeqube-pte-ltd/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="a-no-design"
-                  >
-                    <img
-                      src={linkedin}
-                      alt=""
-                      className="new-footer-icons me-3"
-                    />
-                  </a>
-                  <a
-                    href="https://t.me/homeqube"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="a-no-design"
-                  >
-                    <img
-                      src={telegram}
-                      alt=""
-                      className="new-footer-icons me-3"
-                    />
-                  </a>
-                  <a
-                    href="https://discord.com/invite/JhQXmjm59e"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="a-no-design"
-                  >
-                    <img
-                      src={discord}
-                      alt=""
-                      className="new-footer-icons me-3"
-                    />
+                    Tokenomics
                   </a>
                 </div>
               </div>
+
+              <div className="footer-item-cont">
+                <div class=" new-footer-headline text-uppercase mb-2">
+                  Our Products
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.homeqube.io/"
+                    className="a-no-design"
+                    target="__blank"
+                  >
+                    Homeqube.io <img src={rightArrow} alt="" />
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.homeqube.ai/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="a-no-design"
+                  >
+                    Homeqube.ai <img src={rightArrow} alt="" />
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.homeqube.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="a-no-design"
+                  >
+                    Homeqube.com <img src={rightArrow} alt="" />
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/DAO-projects"
+                    className="a-no-design"
+                  >
+                    Dao projects
+                  </a>
+                </div>
+              </div>
+
+              <div className="footer-item-cont">
+                <div class=" new-footer-headline text-uppercase mb-2">
+                  Resources
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/resources-blogs"
+                    className="a-no-design"
+                  >
+                    Blogs
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/privacy-policy"
+                    className="a-no-design"
+                  >
+                    Privacy policy
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/resources-faqs"
+                    className="a-no-design"
+                  >
+                    Faqs
+                  </a>
+                </div>
+              </div>
+
+              <div className="footer-item-cont">
+                <div class=" new-footer-headline text-uppercase mb-2">Legal</div>
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/terms-of-use"
+                    className="a-no-design"
+                  >
+                    Terms of use
+                  </a>
+                </div>
+
+                <div class=" new-footer-text text-uppercase mb-2">
+                  <a
+                    href="https://www.qube.homeqube.com/privacy-policy"
+                    className="a-no-design"
+                  >
+                    Privacy policy
+                  </a>
+                </div>
+
+              </div>
+
+              <div className="footer-item-cont mb-2">
+                <div class=" new-footer-headline-2 text-uppercase  mb-2">
+                  Connect with us
+                </div>
+
+                <div class=" mb-2">
+                  <div className="d-flex pb-1">
+                    <a
+                      href="https://www.instagram.com/homeqube.ai/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="a-no-design"
+                    >
+                      <img
+                        src={instagram}
+                        alt=""
+                        className="new-footer-icons me-3"
+                      />
+                    </a>
+                    <a
+                      href="https://twitter.com/homeqube_ai"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="a-no-design"
+                    >
+                      <img
+                        src={twitter}
+                        alt=""
+                        className="new-footer-icons me-3"
+                      />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/homeqube-pte-ltd/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="a-no-design"
+                    >
+                      <img
+                        src={linkedin}
+                        alt=""
+                        className="new-footer-icons me-3"
+                      />
+                    </a>
+                    <a
+                      href="https://t.me/homeqube"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="a-no-design"
+                    >
+                      <img
+                        src={telegram}
+                        alt=""
+                        className="new-footer-icons me-3"
+                      />
+                    </a>
+                    <a
+                      href="https://discord.com/invite/JhQXmjm59e"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="a-no-design"
+                    >
+                      <img
+                        src={discord}
+                        alt=""
+                        className="new-footer-icons me-3"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class=" new-footer-text text-uppercase  mb-2">
+                  about@homeqube.com
+                </div>
+
+                <div class="text-nowrap new-footer-text text-uppercase  mb-2">
+                  Homeqube Pte. Ltd.™
+                </div>
+                
+                <div class=" new-footer-text text-uppercase mb-2">
+                  Homeqube, Inc.
+                </div>
+
+                <div class=" new-footer-text text-uppercase  mb-2">
+                  Homqube Dao, LLC
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="row align-items-start mb-2">
-              <div class="col-2 new-footer-text text-uppercase">
+            {/* <div class="row align-items-start mb-2">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/stakeholders"
                   className="a-no-design"
@@ -107,15 +245,15 @@ function FooterWeb() {
                   StakeHolders
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/about"
                   className="a-no-design"
                 >
                   About us
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.homeqube.io/"
                   className="a-no-design"
@@ -124,15 +262,15 @@ function FooterWeb() {
                   Homeqube.io <img src={rightArrow} alt="" />
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/resources-blogs"
                   className="a-no-design"
                 >
                   Blogs
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/terms-of-use"
                   className="a-no-design"
@@ -140,13 +278,13 @@ function FooterWeb() {
                   Terms of use
                 </a>
               </div>
-              <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 about@homeqube.com
               </div>
             </div>
 
             <div class="row align-items-start mb-3">
-              <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/qube-tokenomics"
                   className="a-no-design"
@@ -154,15 +292,15 @@ function FooterWeb() {
                   Tokenomics
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/about-people"
                   className="a-no-design"
                 >
                   Our Team
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.homeqube.ai/"
                   target="_blank"
@@ -172,15 +310,15 @@ function FooterWeb() {
                   Homeqube.ai <img src={rightArrow} alt="" />
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/resources-news"
                   className="a-no-design"
                 >
                   News
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/privacy-policy"
                   className="a-no-design"
@@ -188,24 +326,24 @@ function FooterWeb() {
                   Privacy policy
                 </a>
               </div>
-              <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 Homeqube Pte. Ltd.™
               </div>
             </div>
 
             <div class="row align-items-start mb-3">
-              <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/carbon-credit"
                   className="a-no-design"
                 ></a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a href="/about-philosophy" className="a-no-design">
                   Our Philosophy
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.homeqube.com/"
                   target="_blank"
@@ -215,31 +353,31 @@ function FooterWeb() {
                   Homeqube.com <img src={rightArrow} alt="" />
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/resources-faqs"
                   className="a-no-design"
                 >
                   Faqs
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase">
                 Homeqube, Inc.
               </div>
 
-              {/* <div class="col-2 new-footer-text text-uppercase"></div> */}
+              <div class=" new-footer-text text-uppercase"></div>
             </div>
 
             <div class="row align-items-start mb-3">
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/ip-assets"
                   className="a-no-design"
                 ></a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/DAO-projects"
                   className="a-no-design"
@@ -247,25 +385,25 @@ function FooterWeb() {
                   Dao projects
                 </a>
               </div>
-              {/* <div class="col-2 new-footer-text text-uppercase">
+              <div class=" new-footer-text text-uppercase">
                 <a
                   href="https://www.qube.homeqube.com/resources-esg"
                   className="a-no-design"
                 >
                   ESG
                 </a>
-              </div> */}
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              <div class="col-2 new-footer-text text-uppercase">
+              </div>
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase">
                 Homqube Dao, LLC
               </div>
-            </div>
+            </div> */}
 
             {/* <div class="row align-items-start mb-3">
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              <div class="col-2 new-footer-text text-uppercase"></div>
-              <div class="col-2 new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase"></div>
+              <div class=" new-footer-text text-uppercase"></div>
             </div> */}
           </div>
         </div>

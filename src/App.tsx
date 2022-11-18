@@ -50,6 +50,7 @@ import Practice from "./views/dependetSelect";
 import AllNftFilter from "./views/AllNfts";
 import NotFound from "./components/NotFound/NotFound";
 import Footer2 from "./components/Footer2";
+import ScrollToTop from "./ScrollToTop";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const theme = createTheme({
@@ -116,188 +117,191 @@ const App = () => {
             <WalletModalProvider>
               <CandyShopDataValidator>
                 <main>
-                  <MainContainer>
-                    <Routes>
-                      <Route
-                        path={RouteName.HomePage}
-                        element={
-                          <>
-                            <TopNav />
-                            <HomePage />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.practice}
-                        element={
-                          <>
-                            <TopNav />
-                            <Practice />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.AllNftFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <AllNftFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.ClaimQubes}
-                        element={
-                          <>
-                            <TopNav />
-                            <ClaimQubesAWS />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.StructuralLegaciesFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <StructuralLegaciesFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.HomeDesignFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <HomeDesignFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.SystemArchitectureFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <SystemArchitectureFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.ProductsFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <ProductsFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.AlgorithmFilter}
-                        element={
-                          <>
-                            <TopNav />
-                            <AlgorithmFilter />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.MyCollection}
-                        element={
-                          <>
-                            <TopNav />
-                            <Fetch />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.sell}
-                        element={
-                          <>
-                            <TopNav />
-                            <MyCollection />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.auctionsView}
-                        element={
-                          <>
-                            <TopNav />
-                            <AuctionsView />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.addMyCollections}
-                        element={
-                          <>
-                            <TopNav />
-                            <AddMyCollections />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.activityView}
-                        element={
-                          <>
-                            <TopNav />
-                            <ActivityView />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.customToken}
-                        element={
-                          <>
-                            <TopNav />
-                            <CustomTokenMarketplace />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCollection}
-                        element={
-                          <>
-                            <TopNav />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.marketplaceWithUrl}
-                        element={
-                          <>
-                            <TopNav />
-                            <MarketplaceWithUrl />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCurrencyMarketplace}
-                        element={
-                          <>
-                            <TopNav />
-                            <MultiCurrencyMarketplace />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.notfound}
-                        element={
-                          <>
-                            <NotFound />
-                          </>
-                        }
-                      />
-                      <Route
-                        path={RouteName.multipleCurrencySell}
-                        element={
-                          <>
-                            <TopNav />
-                            <MultiCurrencySell />
-                          </>
-                        }
-                      />
-                    </Routes>
-                  </MainContainer>
+                  <ScrollToTop>
+                    <MainContainer>
+                      <Routes>
+                        <Route
+                          path={RouteName.HomePage}
+                          element={
+                            <>
+                              <TopNav />
+                              <HomePage />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.practice}
+                          element={
+                            <>
+                              <TopNav />
+                              <Practice />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.AllNftFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <AllNftFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.ClaimQubes}
+                          element={
+                            <>
+                              <TopNav />
+                              <ClaimQubesAWS />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.StructuralLegaciesFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <StructuralLegaciesFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.HomeDesignFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <HomeDesignFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.SystemArchitectureFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <SystemArchitectureFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.ProductsFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <ProductsFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.AlgorithmFilter}
+                          element={
+                            <>
+                              <TopNav />
+                              <AlgorithmFilter />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.MyCollection}
+                          element={
+                            <>
+                              <TopNav />
+                              <Fetch />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.sell}
+                          element={
+                            <>
+                              <TopNav />
+                              <MyCollection />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.auctionsView}
+                          element={
+                            <>
+                              <TopNav />
+                              <AuctionsView />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.addMyCollections}
+                          element={
+                            <>
+                              <TopNav />
+                              <AddMyCollections />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.activityView}
+                          element={
+                            <>
+                              <TopNav />
+                              <ActivityView />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.customToken}
+                          element={
+                            <>
+                              <TopNav />
+                              <CustomTokenMarketplace />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.multipleCollection}
+                          element={
+                            <>
+                              <TopNav />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.marketplaceWithUrl}
+                          element={
+                            <>
+                              <TopNav />
+                              <MarketplaceWithUrl />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.multipleCurrencyMarketplace}
+                          element={
+                            <>
+                              <TopNav />
+                              <MultiCurrencyMarketplace />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.notfound}
+                          element={
+                            <>
+                              <NotFound />
+                            </>
+                          }
+                        />
+                        <Route
+                          path={RouteName.multipleCurrencySell}
+                          element={
+                            <>
+                              <TopNav />
+                              <MultiCurrencySell />
+                            </>
+                          }
+                        />
+                      </Routes>
+                    </MainContainer>
+                  </ScrollToTop>
+                  
                 </main>
               </CandyShopDataValidator>
               {/* <Footer /> */}
