@@ -1,0 +1,29 @@
+.sort-container {
+    display: grid;
+    grid-auto-flow: column;
+    background: #DDDDE9;
+    width: 100%;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.sort {
+    background: none;
+    color: #000000;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 100px;
+}
+
+.sort:hover {
+    background: #6e7ca2;
+    cursor: pointer;
+}
+
+.selected, .selected:hover {
+    background: #1F2B4B;
+    border-radius: 100px;
+    color: #FFFFFF;
+}

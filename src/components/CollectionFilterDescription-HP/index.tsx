@@ -11,6 +11,7 @@ import { Search } from "../Search";
 import { removeDuplicate } from "../../utils/array";
 import { LoadStatus } from "../../constant";
 import "../../style/order-filter.less";
+import "./style.css";
 
 interface CollectionFilterProps {
   onChange: (
@@ -121,9 +122,9 @@ export const CollectionFilterDescriptionHP: React.FC<CollectionFilterProps> = ({
             <>
               {selectedManual?.collectionId === filter.collectionId ? (
                 <div className="item-description">
-                  {filter.description}
-                  <p className="HP-Des">{filter.description2}</p>
-                  <p className="HP-Des-3">{filter.description3}</p>
+                  
+                  <p className="HP-Des">{filter.description}&nbsp;{filter.description2}</p>
+                  <p className="HP-Des">{filter.description3}</p>
                   {/* <div className="nft-list-com-col ms-5">
                     <ul className="HP-Des-4">
                       <li>WITH CANTILEVER</li>

@@ -1,0 +1,35 @@
+
+.candy-search input {
+  padding: 4px 4px 4px 24px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #C1C1D2;
+  width: 100%;
+  padding-block: 12px;
+  padding-left: 48px;
+  background: #F4F4F8;
+
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #71717D;
+}
+
+.candy-search {
+  position: relative;
+
+  max-width: 456px;
+}
+
+.candy-search::placeholder {
+  color: #F4F4F8;
+}
+
+.candy-search svg {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  height: 20px;
+  transform: translateY(-50%);
+}

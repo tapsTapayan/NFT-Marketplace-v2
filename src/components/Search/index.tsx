@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IconSearch } from '../../assets/IconSearch';
-import './style.less';
+import './style.css';
 
 interface SearchProps {
   onSearch: (search: string) => void;

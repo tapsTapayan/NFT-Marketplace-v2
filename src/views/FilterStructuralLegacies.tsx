@@ -67,7 +67,7 @@ const FILTERS = [
     collectionId: "1",
     identifier: -1775657236,
     qubeClaims: "",
-    description: "",
+    description: "Introducing:",
     description2: "HomeQube’s Structural Legacy System.",
     description3:
       "The system boasts 2500 unique structural combinations (without cantilever) generated from HomeQube’s System Architecture Platform (SAP). The Legacy System allows open architecture that can be used to build limitless design configurations up to 3-story housing for flat topographies." +

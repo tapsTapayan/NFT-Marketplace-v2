@@ -1,0 +1,14 @@
+
+.item-description {
+    width: fit-content;
+}
+
+.SL-Des{
+    color: black;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: left;
+}

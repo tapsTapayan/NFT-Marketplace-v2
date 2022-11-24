@@ -11,6 +11,7 @@ import { Search } from "../Search";
 import { removeDuplicate } from "../../utils/array";
 import { LoadStatus } from "../../constant";
 import "../../style/order-filter.less";
+import "./style.css";
 
 interface CollectionFilterProps {
   onChange: (

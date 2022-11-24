@@ -1,0 +1,8 @@
+
+.candy-container {
+    display: flex;
+    flex-direction: column;
+    padding-block: 48px;
+    row-gap: 48px;
+    
+}
