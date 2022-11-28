@@ -253,7 +253,7 @@ export const OrdersP: React.FC<OrdersProps> = ({
     return (
       <div className="candy-orders-container" style={style}>
         <div className="candy-container">
-          {Boolean(filters) && (
+          {/* {Boolean(filters) && (
             <CollectionFilterDescription
               onChange={onChangeCollection}
               selected={selectedCollection}
@@ -262,11 +262,11 @@ export const OrdersP: React.FC<OrdersProps> = ({
               selectedManual={collectionFilter}
               shopId={selectedShop?.candyShopAddress || shopFilter?.shopId}
             />
-          )}
+          )} */}
           {search && (
             <Search onSearch={onSearchNft} placeholder="Search NFTs" />
           )}
-          <nav className="candy-orders-filter menu2 text-uppercase pb-3 pt-3">
+          {/* <nav className="candy-orders-filter menu2 text-uppercase pb-3 pt-3">
             {Boolean(filters) && (
               <CollectionFilterComponent
                 onChange={onChangeCollection}
@@ -290,7 +290,7 @@ export const OrdersP: React.FC<OrdersProps> = ({
                 search={filterSearch}
               />
             )}
-          </nav>
+          </nav> */}
           <div className="candy-orders-content">
             {loading ? (
               <LoadingSkeleton />

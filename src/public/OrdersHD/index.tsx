@@ -28,6 +28,7 @@ import { removeDuplicate } from "../../utils/array";
 import { OrdersActionsStatus } from "../../constant";
 import { ORDER_FETCH_LIMIT, SORT_OPTIONS } from "../../constant/Orders";
 import "./index.less";
+import "./style.css";
 
 interface OrdersProps {
   walletConnectComponent: React.ReactElement;
@@ -262,13 +263,7 @@ export const OrdersHD: React.FC<OrdersProps> = ({
               shopId={selectedShop?.candyShopAddress || shopFilter?.shopId}
             />
           )}
-          {search && (
-            <Search onSearch={onSearchNft} placeholder="Search NFTs" />
-          )}
-          {/* <nav className="candy-orders-filter menu2 text-uppercase pb-3 pt-3"> */}
-          <nav className="bg-dark text-white navbar navbar-expand-lg navbar-light mb-3 rounded">
-            <div className="container">
-             
+              
             {Boolean(filters) && (
               <CollectionFilterComponent
                 onChange={onChangeCollection}
@@ -292,8 +287,12 @@ export const OrdersHD: React.FC<OrdersProps> = ({
                 search={filterSearch}
               />
             )}
-            </div>
-          </nav>
+
+           {search && (
+            <Search onSearch={onSearchNft} placeholder="Search NFTs" />
+          )}
+            
+          
           <div className="candy-orders-content">
             {loading ? (
               <LoadingSkeleton />

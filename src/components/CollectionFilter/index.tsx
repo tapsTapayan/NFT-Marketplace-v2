@@ -11,6 +11,7 @@ import { Search } from "../Search";
 import { removeDuplicate } from "../../utils/array";
 import { LoadStatus } from "../../constant";
 import "../../style/order-filter.less";
+import "./style.css";
 
 interface CollectionFilterProps {
   onChange: (
@@ -131,28 +132,28 @@ export const CollectionFilter: React.FC<CollectionFilterProps> = ({
                     </li>
                 </ul>
       </div> */}
-        <div className="collapse navbar-collapse d-flex justify-content-center" id="navmenu">
-        <ul className="navbar-nav text-uppercase">
+      
+        <div className="sort-container text-uppercase">
         {filteredList.map((filter) => {
           return (
             <>
-              <li
+              <input type="radio" name={filter.name} id={filter.collectionId} checked={selectedManual?.collectionId === filter.collectionId}
                 key={filter.name}
-                className={
-                  selectedManual?.collectionId === filter.collectionId
-                    ? "nav-item ms-3 selected"
-                    : "nav-item ms-3"
-                }
+                className="btn-check ms-3"
                 onClick={onChange(filter, "manual")}
-              >
-              <p className="nav-item-pipehome px-4 pt-4">
+              />
+              <label className={
+                  selectedManual?.collectionId === filter.collectionId
+                    ? "selected sort px-4 py-3"
+                    : "sort px-4 py-3"
+                } htmlFor={filter.collectionId}>
               {filter.name}   {filter.qubeClaims}
-              </p>
-              </li>
+              </label>
+              
             </>
           );
         })}
-        </ul>
+        </div>
         {/* {search && <Search onSearch={onSearch} placeholder="Search collections" />} */}
         {/* {selectedManual ? (
             <div className="candy-filter-selected-name">
@@ -165,7 +166,7 @@ export const CollectionFilter: React.FC<CollectionFilterProps> = ({
               All
             </li>
           )} */}
-        </div>
+        
       </>
     );
   }

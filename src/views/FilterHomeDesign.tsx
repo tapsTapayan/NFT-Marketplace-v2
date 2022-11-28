@@ -65,7 +65,7 @@ const FILTERS = [
     identifier: 1462698944,
     qubeClaims: "",
     description:
-      "Community collection of home designs generating bottom-up architecture",
+      "Community collection of home designs generating bottom-up architecture.",
     description2: "HomeQube’s Structural Legacy System.",
     description3: "",
     description4: "",
@@ -76,7 +76,7 @@ const FILTERS = [
     identifier: -16541584,
     qubeClaims: "",
     description:
-      "Community collection of home designs generating bottom-up architecture",
+      "Community collection of home designs generating bottom-up architecture.",
     description2: "HomeQube’s Structural Legacy System.",
     description3: "",
     description4: "",
